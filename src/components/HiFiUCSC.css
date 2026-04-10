@@ -1,0 +1,282 @@
+/* ── Wrapper ─────────────────────────────────────────────── */
+.hucsc {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.hucsc__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/* ── Grid / tiles ────────────────────────────────────────── */
+.hucsc__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.hucsc__tile {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hucsc__tile--wide { grid-column: 1 / -1; }
+
+.hucsc__tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 100px;
+  padding: 2px 8px;
+  align-self: flex-start;
+}
+
+/* ── AI search bar ───────────────────────────────────────── */
+.hucsc__search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1.5px solid #0891b2;
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: 0 0 0 3px rgba(8,145,178,0.08);
+}
+
+.hucsc__search-ai-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  background: #0891b2;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.hucsc__search-text {
+  flex: 1;
+  font-size: 11.5px;
+  color: #374151;
+}
+
+.hucsc__search-btn {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 14px;
+  background: #0891b2;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: default;
+}
+
+.hucsc__suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hucsc__suggestion-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.hucsc__suggestion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.hucsc__chip {
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  cursor: default;
+}
+.hucsc__chip:hover { background: #e0f2fe; border-color: #0891b2; color: #0e7490; }
+
+/* ── Track toggles ───────────────────────────────────────── */
+.hucsc__tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hucsc__track-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.hucsc__track-row:last-child { border-bottom: none; }
+
+.hucsc__track-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hucsc__track-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hucsc__track-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hucsc__track-name {
+  font-size: 11.5px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.hucsc__track-type {
+  font-size: 9.5px;
+  color: #9ca3af;
+}
+
+/* ── Toggle switch ───────────────────────────────────────── */
+.hucsc__toggle {
+  width: 30px;
+  height: 17px;
+  border-radius: 100px;
+  background: #d1d5db;
+  position: relative;
+  flex-shrink: 0;
+  cursor: default;
+  transition: background 0.2s;
+}
+
+.hucsc__toggle--on {
+  background: #0891b2;
+}
+
+.hucsc__toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.hucsc__toggle--on .hucsc__toggle-thumb {
+  transform: translateX(13px);
+}
+
+/* ── Expandable panel ────────────────────────────────────── */
+.hucsc__panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hucsc__panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  cursor: default;
+}
+
+.hucsc__panel-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hucsc__panel-body {
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.hucsc__panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid #f9fafb;
+  font-size: 11px;
+}
+.hucsc__panel-row span:first-child { color: #9ca3af; }
+.hucsc__panel-row span:last-child  { color: #374151; font-weight: 500; }
+
+.hucsc__mono {
+  font-family: 'Courier New', monospace;
+  font-size: 10.5px;
+}
+
+.hucsc__link {
+  color: #0891b2;
+  text-decoration: underline;
+  cursor: default;
+}
+
+.hucsc__panel-actions {
+  display: flex;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.hucsc__action-btn {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: default;
+  border: 1px solid;
+}
+
+.hucsc__action-btn:not(.hucsc__action-btn--ghost) {
+  background: #0891b2;
+  color: #fff;
+  border-color: #0891b2;
+}
+
+.hucsc__action-btn--ghost {
+  background: #fff;
+  color: #374151;
+  border-color: #e5e7eb;
+}
+
+@media (max-width: 540px) {
+  .hucsc__grid { grid-template-columns: 1fr; }
+  .hucsc__tile--wide { grid-column: 1; }
+}

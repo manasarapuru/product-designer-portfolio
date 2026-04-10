@@ -1,0 +1,126 @@
+.rag-fb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.rag-fb__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.rag-fb__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7c6fcf;
+  background: #f0edfc;
+  border: 1px solid #e0d8f8;
+  border-radius: 100px;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.rag-fb__sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Chat area ── */
+.rag-fb__chat {
+  background: #f8f7fc;
+  border: 1.5px solid #e8e4f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.rag-fb__chat-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #ffffff;
+  border-bottom: 1px solid #ede8f8;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.02em;
+}
+
+.rag-fb__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  box-shadow: 0 0 0 2px rgba(110,231,183,0.25);
+}
+
+.rag-fb__messages {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rag-fb__row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.rag-fb__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e5e0f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c6fcf;
+  flex-shrink: 0;
+}
+
+.rag-fb__bubble {
+  background: #ffffff;
+  border: 1px solid #e8e4f0;
+  border-radius: 14px;
+  border-bottom-left-radius: 4px;
+  padding: 9px 13px;
+  font-size: 12px;
+  color: #1a1a2e;
+  line-height: 1.5;
+  max-width: 360px;
+}
+
+/* ── Theme pills ── */
+.rag-fb__themes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.rag-fb__theme {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #f0edfc;
+  border: 1px solid #e0d8f8;
+  border-radius: 100px;
+  color: #7c6fcf;
+}
+
+.rag-fb__theme-icon {
+  display: flex;
+  align-items: center;
+}
+
+.rag-fb__theme-text {
+  font-size: 11px;
+  font-weight: 600;
+}

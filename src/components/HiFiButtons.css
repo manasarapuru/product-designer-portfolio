@@ -1,0 +1,307 @@
+/* ── Wrapper ──────────────────────────────────────────────── */
+.stl {
+  width: 100%;
+  font-family: 'Source Sans Pro', 'Inter', -apple-system, sans-serif;
+}
+
+.stl__caption {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.stl__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── Tile ─────────────────────────────────────────────────── */
+.stl__tile {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stl__tile--wide {
+  grid-column: 1 / -1;
+}
+
+.stl__tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  background: #e5e7eb;
+  border-radius: 100px;
+  padding: 2px 8px;
+  align-self: flex-start;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* ── st.file_uploader ─────────────────────────────────────── */
+.stl__uploader {
+  border: 1.5px dashed #d1d5db;
+  border-radius: 6px;
+  background: white;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.stl__uploader-text {
+  font-size: 12px;
+  color: #374151;
+  margin: 0;
+  font-weight: 500;
+}
+
+.stl__uploader-hint {
+  font-size: 10px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Uploaded file chip ───────────────────────────────────── */
+.stl__file-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.stl__file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.stl__file-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.stl__file-meta {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.stl__file-check {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.stl__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 8px 18px;
+  cursor: default;
+  border: none;
+  white-space: nowrap;
+  width: 100%;
+  font-family: inherit;
+}
+
+.stl__btn--primary {
+  background: #4b5563;
+  color: white;
+}
+
+.stl__btn--primary:disabled {
+  background: #9ca3af;
+  color: rgba(255,255,255,0.7);
+}
+
+.stl__btn--loading {
+  background: #ef4444;
+  opacity: 0.85;
+}
+
+.stl__btn--outline {
+  background: white;
+  border: 1.5px solid #d1d5db;
+  color: #374151;
+}
+
+.stl__btn--sm {
+  font-size: 11px;
+  padding: 5px 12px;
+  width: auto;
+}
+
+.stl__btn--download {
+  background: white;
+  border: 1.5px solid #FF4B4B;
+  color: #FF4B4B;
+}
+
+/* ── Button states (stacked) ──────────────────────────────── */
+.stl__state-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.stl__state-labels {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stl__state-labels span {
+  font-size: 9px;
+  color: #9ca3af;
+  text-align: center;
+  flex: 1;
+}
+
+/* ── st.success ───────────────────────────────────────────── */
+.stl__success-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  border-radius: 0 6px 6px 0;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #14532d;
+}
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.stl__spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: stlSpin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes stlSpin { to { transform: rotate(360deg); } }
+
+/* ── st.bar_chart / st.line_chart ────────────────────────── */
+.stl__chart-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stl__chart-svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.stl__chart-baseline {
+  height: 1.5px;
+  background: #e5e7eb;
+  border-radius: 1px;
+}
+
+/* ── st.selectbox ─────────────────────────────────────────── */
+.stl__selects-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.stl__select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.stl__select-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.stl__select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 5px;
+  background: white;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: default;
+}
+
+.stl__select-trigger--open {
+  border-color: #FF4B4B;
+  color: #111827;
+  font-weight: 600;
+}
+
+.stl__caret {
+  font-size: 10px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.stl__select-menu {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.stl__select-opt {
+  padding: 7px 10px;
+  font-size: 12px;
+  color: #374151;
+  cursor: default;
+}
+
+.stl__select-opt:hover {
+  background: #f9fafb;
+}
+
+.stl__select-opt--active {
+  background: #fff1f1;
+  color: #FF4B4B;
+  font-weight: 600;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .stl__grid { grid-template-columns: 1fr; }
+  .stl__tile--wide { grid-column: 1; }
+}

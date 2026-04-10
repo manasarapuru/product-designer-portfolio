@@ -1,0 +1,207 @@
+.fd {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fd__heading {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Flow ────────────────────────────────────────────────── */
+.fd__flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.fd__step-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.fd__step {
+  flex: 1;
+  background: var(--step-bg);
+  border: 1.5px solid color-mix(in srgb, var(--step-color) 25%, transparent);
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* ── Icon ────────────────────────────────────────────────── */
+.fd__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid color-mix(in srgb, var(--step-color) 35%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--step-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.fd__phase {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--step-color);
+  letter-spacing: -0.01em;
+}
+
+.fd__actor {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid currentColor;
+}
+
+.fd__actions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.fd__action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #374151;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  text-align: left;
+  border: 1px solid #f0f0f0;
+}
+
+.fd__action-num {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--step-color);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Arrow ───────────────────────────────────────────────── */
+.fd__arrow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.fd__arrow-line {
+  width: 28px;
+  height: 2px;
+  background: #d1d5db;
+}
+
+.fd__arrow-head {
+  flex-shrink: 0;
+}
+
+/* ── Compare ─────────────────────────────────────────────── */
+.fd__compare {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.fd__compare-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.fd__compare-cards {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.fd__compare-card {
+  flex: 1;
+  border: 1.5px solid;
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fd__compare-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fd__compare-value {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.fd__compare-sub {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.fd__compare-arrow {
+  font-size: 20px;
+  color: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* ── Note ────────────────────────────────────────────────── */
+.fd__note {
+  font-size: 11px;
+  color: #9ca3af;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 12px;
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 580px) {
+  .fd__flow { flex-direction: column; }
+  .fd__step-wrap { flex-direction: column; }
+  .fd__arrow { transform: rotate(90deg); padding: 4px 0; }
+  .fd__arrow-line { width: 20px; }
+}

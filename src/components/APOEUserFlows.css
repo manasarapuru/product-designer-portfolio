@@ -1,0 +1,152 @@
+.auf {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Flow ────────────────────────────────────────────────── */
+.auf__flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+
+.auf__step-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.auf__step {
+  flex: 1;
+  background: var(--step-bg);
+  border: 1.5px solid color-mix(in srgb, var(--step-color) 25%, transparent);
+  border-radius: 12px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* ── Icon ────────────────────────────────────────────────── */
+.auf__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid color-mix(in srgb, var(--step-color) 35%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--step-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.auf__phase {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--step-color);
+  letter-spacing: -0.01em;
+}
+
+.auf__actor {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid currentColor;
+}
+
+.auf__actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.auf__action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: #374151;
+  background: white;
+  border-radius: 6px;
+  padding: 6px 10px;
+  text-align: left;
+  border: 1px solid #f0f0f0;
+}
+
+.auf__action-num {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--step-color);
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.auf__dynamic-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--step-color);
+  background: color-mix(in srgb, var(--step-color) 12%, transparent);
+  border-radius: 100px;
+  padding: 2px 8px;
+}
+
+/* ── Arrow ───────────────────────────────────────────────── */
+.auf__arrow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
+.auf__arrow-line {
+  width: 24px;
+  height: 2px;
+  background: #d1d5db;
+}
+
+.auf__arrow-head {
+  flex-shrink: 0;
+}
+
+/* ── Note ────────────────────────────────────────────────── */
+.auf__note {
+  font-size: 11px;
+  color: #9ca3af;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 12px;
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .auf__flow { flex-direction: column; }
+  .auf__step-wrap { flex-direction: column; }
+  .auf__arrow { transform: rotate(90deg); padding: 4px 0; }
+  .auf__arrow-line { width: 20px; }
+}

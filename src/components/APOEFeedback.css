@@ -1,0 +1,137 @@
+.apoe-fb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.apoe-fb__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.apoe-fb__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--toc-color, #4ecdc4);
+  background: color-mix(in srgb, var(--toc-color, #4ecdc4) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--toc-color, #4ecdc4) 22%, transparent);
+  border-radius: 100px;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.apoe-fb__sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Quote card ── */
+.apoe-fb__card {
+  position: relative;
+  padding: 20px 20px 16px;
+  background: var(--surface, #fafaf8);
+  border: 1.5px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  border-left: 4px solid var(--toc-color, #4ecdc4);
+}
+
+.apoe-fb__quote-mark {
+  font-size: 48px;
+  line-height: 1;
+  color: color-mix(in srgb, var(--toc-color, #4ecdc4) 30%, transparent);
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 10px;
+  left: 16px;
+}
+
+.apoe-fb__quote {
+  font-size: 13.5px;
+  color: var(--ink, #1a1a1a);
+  line-height: 1.65;
+  margin: 0 0 16px;
+  padding-top: 20px;
+  font-style: italic;
+}
+
+.apoe-fb__attribution {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border, #e5e7eb);
+}
+
+.apoe-fb__attr-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--toc-color, #4ecdc4) 15%, transparent);
+  color: var(--toc-color, #4ecdc4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.apoe-fb__attr-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink, #1a1a1a);
+}
+
+.apoe-fb__attr-role {
+  font-size: 10.5px;
+  color: #6b7280;
+}
+
+/* ── Key points ── */
+.apoe-fb__points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apoe-fb__point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 8px;
+}
+
+.apoe-fb__point-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--toc-color, #4ecdc4) 15%, transparent);
+  color: var(--toc-color, #4ecdc4);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.apoe-fb__point-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink, #1a1a1a);
+  margin-bottom: 2px;
+}
+
+.apoe-fb__point-detail {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.5;
+}

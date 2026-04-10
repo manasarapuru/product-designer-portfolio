@@ -1,0 +1,145 @@
+.ssf {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.ssf__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ssf__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7c6fcf;
+  background: #f0edfc;
+  border: 1px solid #e0d8f8;
+  border-radius: 100px;
+  padding: 3px 10px;
+  width: fit-content;
+}
+
+.ssf__sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── 2×2 grid ── */
+.ssf__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ssf__grid--single {
+  grid-template-columns: 1fr;
+}
+
+.ssf__card-sub {
+  font-size: 10.5px;
+  color: #9ca3af;
+  margin: 0;
+  padding: 6px 14px 0;
+  font-style: italic;
+}
+
+.ssf__card {
+  background: #ffffff;
+  border: 1.5px solid var(--border, #e5e7eb);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ssf__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--surface, #fafaf8);
+  border-bottom: 1px solid var(--border, #e5e7eb);
+}
+
+.ssf__group-name {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink, #1a1a1a);
+}
+
+.ssf__count {
+  font-size: 10px;
+  font-weight: 600;
+  color: #7c6fcf;
+  background: #f0edfc;
+  border-radius: 100px;
+  padding: 2px 8px;
+}
+
+/* ── Items ── */
+.ssf__items {
+  list-style: none;
+  margin: 0;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ssf__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ssf__q {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.ssf__a {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #16a34a;
+  line-height: 1.4;
+}
+
+/* Nuanced response */
+.ssf__item--nuanced .ssf__q {
+  color: #6b7280;
+}
+
+.ssf__a--nuanced {
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* Note item (no Q/A structure) */
+.ssf__item--note {
+  padding: 7px 10px;
+  background: color-mix(in srgb, var(--toc-color, #4ecdc4) 8%, transparent);
+  border-radius: 6px;
+  border-left: 3px solid color-mix(in srgb, var(--toc-color, #4ecdc4) 50%, transparent);
+}
+
+.ssf__note-text {
+  font-size: 11px;
+  color: #374151;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+@media (max-width: 560px) {
+  .ssf__grid {
+    grid-template-columns: 1fr;
+  }
+}

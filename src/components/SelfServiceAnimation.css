@@ -1,0 +1,603 @@
+/* ── Outer ──────────────────────────────────────────────── */
+.ssa {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0 0;
+}
+
+/* ── Browser chrome ─────────────────────────────────────── */
+.ssa__browser {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.16);
+  border: 1px solid #d1d5db;
+}
+
+.ssa__browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 9px 14px;
+}
+
+.ssa__browser-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.ssa__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.ssa__dot--red    { background: #ff5f57; }
+.ssa__dot--yellow { background: #febc2e; }
+.ssa__dot--green  { background: #28c840; }
+
+.ssa__browser-url {
+  flex: 1;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.ssa__lock { font-size: 10px; }
+
+/* ── Screen ─────────────────────────────────────────────── */
+.ssa__screen {
+  background: #f0f2f5;
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Login ──────────────────────────────────────────────── */
+.ssa__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #e8f6f7 0%, #d4eced 100%);
+}
+
+.ssa__login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 24px;
+  width: 220px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ssa__login-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ssa__login-product {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a535c;
+  letter-spacing: -0.02em;
+}
+
+.ssa__login-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+}
+
+.ssa__login-field {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #374151;
+  background: #f9fafb;
+}
+
+.ssa__login-field--pass { letter-spacing: 2px; color: #9ca3af; }
+
+.ssa__login-btn {
+  background: #1a535c;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 9px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.ssa__login-spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: ssaSpin 0.7s linear infinite;
+}
+
+/* ── App layout ─────────────────────────────────────────── */
+.ssa__app {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+.ssa__sidebar {
+  width: 52px;
+  background: #1a535c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  flex-shrink: 0;
+}
+
+.ssa__sidebar-logo { margin-bottom: 16px; }
+
+.ssa__sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  align-items: center;
+}
+
+.ssa__sidebar-item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.5);
+  cursor: default;
+}
+
+.ssa__sidebar-item--active {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.ssa__sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+}
+
+.ssa__sidebar-profile-info { display: none; } /* hidden in narrow sidebar */
+
+/* ── Main ───────────────────────────────────────────────── */
+.ssa__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  min-width: 0;
+}
+
+.ssa__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.ssa__topbar-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ssa__topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ssa__topbar-badge {
+  font-size: 10px;
+  font-weight: 700;
+  color: #107c10;
+  background: #d4edda;
+  border-radius: 100px;
+  padding: 2px 8px;
+}
+
+/* ── Card ───────────────────────────────────────────────── */
+.ssa__card {
+  margin: 16px 20px;
+  background: white;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.ssa__card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.ssa__card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ssa__card-sub {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+/* ── Drop zone ──────────────────────────────────────────── */
+.ssa__dropzone {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #fafafa;
+  transition: border-color 0.2s, background 0.2s;
+  min-height: 80px;
+  justify-content: center;
+  position: relative;
+}
+
+.ssa__dropzone--active {
+  border-color: #1a535c;
+  background: #f0fdfa;
+}
+
+.ssa__dropzone--filled {
+  border-color: #22c55e;
+  background: #f0fdf4;
+  border-style: solid;
+}
+
+.ssa__dropzone-icon { color: #9ca3af; }
+.ssa__dropzone-text { font-size: 11px; color: #9ca3af; }
+
+.ssa__upload-btn {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a535c;
+  background: #d4eced;
+  border: 1.5px solid #1a535c;
+  border-radius: 6px;
+  padding: 6px 16px;
+  cursor: default;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.ssa__upload-btn--hover {
+  background: #1a535c;
+  color: white;
+  transform: scale(0.97);
+}
+
+/* ── File chip ──────────────────────────────────────────── */
+.ssa__file-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.ssa__file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ssa__file-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.ssa__file-size {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.ssa__file-check {
+  font-size: 16px;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* ── File picker ────────────────────────────────────────── */
+.ssa__picker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+  overflow: hidden;
+  animation: ssaPickerIn 0.2s ease;
+}
+
+@keyframes ssaPickerIn {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(0.97); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.ssa__picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.ssa__picker-close { color: #9ca3af; cursor: default; font-size: 11px; }
+
+.ssa__picker-sidebar {
+  float: left;
+  width: 80px;
+  border-right: 1px solid #e5e7eb;
+  padding: 8px 0;
+  height: 100px;
+  overflow: hidden;
+}
+
+.ssa__picker-loc {
+  font-size: 10px;
+  color: #6b7280;
+  padding: 5px 10px;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ssa__picker-loc--active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.ssa__picker-files {
+  margin-left: 80px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ssa__picker-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: #374151;
+  cursor: default;
+}
+
+.ssa__picker-file--selected {
+  background: #eff6ff;
+  outline: 1.5px solid #3b82f6;
+  font-weight: 600;
+}
+
+.ssa__picker-doc-icon { font-size: 14px; }
+
+/* ── Submit ─────────────────────────────────────────────── */
+.ssa__submit {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #1a535c;
+  color: white;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.ssa__submit:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+}
+
+.ssa__submit--clicking {
+  transform: scale(0.97);
+  background: #134040;
+}
+
+.ssa__submit--done {
+  background: #22c55e;
+}
+
+.ssa__spinner {
+  width: 13px;
+  height: 13px;
+  border: 2.5px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: ssaSpin 0.7s linear infinite;
+}
+
+@keyframes ssaSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Download ───────────────────────────────────────────── */
+.ssa__download-row {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.ssa__download-row--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ssa__download-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a535c;
+  background: #d4eced;
+  border: 1.5px solid #1a535c;
+  border-radius: 8px;
+  padding: 8px 20px;
+  cursor: default;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.ssa__download-btn--clicking {
+  background: #1a535c;
+  color: white;
+  transform: scale(0.97);
+}
+
+/* ── Impact credits ─────────────────────────────────────── */
+.ssa__credits {
+  display: flex;
+  gap: 8px;
+  margin: 0 20px 16px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  flex-wrap: wrap;
+}
+
+.ssa__credits--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ssa__stat {
+  flex: 1;
+  min-width: 100px;
+  background: white;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.ssa__stat-icon { font-size: 14px; }
+
+.ssa__stat-value {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a535c;
+  line-height: 1;
+}
+
+.ssa__stat-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+/* ── Cursor ─────────────────────────────────────────────── */
+.ssa__cursor {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  z-index: 20;
+  transform: translate(-2px, -2px);
+  transition: left 0.6s cubic-bezier(0.4,0,0.2,1), top 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.ssa__cursor::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2 2l8 12 2-5 5-2z' fill='%23111' stroke='white' stroke-width='1'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.ssa__cursor--click::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: rgba(26,83,92,0.2);
+  animation: ssaClickPulse 0.4s ease forwards;
+}
+
+@keyframes ssaClickPulse {
+  from { transform: scale(0.5); opacity: 1; }
+  to   { transform: scale(1.8); opacity: 0; }
+}
+
+/* ── Avatar ─────────────────────────────────────────────── */
+.ssa__avatar { border-radius: 50%; flex-shrink: 0; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 540px) {
+  .ssa__screen { height: 380px; }
+  .ssa__credits { flex-direction: column; }
+  .ssa__stat { min-width: unset; }
+}

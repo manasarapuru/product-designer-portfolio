@@ -1,0 +1,156 @@
+.adc {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.adc__layout {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.adc__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adc__col-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e4dc;
+}
+
+.adc__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.adc__col-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.adc__col-sub {
+  display: block;
+  font-size: 10px;
+  color: #8A857E;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}
+
+.adc__items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Pain points */
+.adc__pain-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #fff8f8;
+  border: 1px solid #ffd6d6;
+  border-radius: 7px;
+  padding: 9px 11px;
+}
+
+.adc__pain-dot {
+  font-size: 9px;
+  font-weight: 800;
+  color: #e05555;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.adc__pain-text {
+  font-size: 11.5px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* Requirements */
+.adc__req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  background: #f0fffe;
+  border: 1px solid #b2ecea;
+  border-radius: 7px;
+  padding: 9px 11px;
+}
+
+.adc__req-num {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #4ecdc4;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.adc__req-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.adc__req-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #1a535c;
+  line-height: 1.3;
+}
+
+.adc__req-desc {
+  font-size: 10.5px;
+  color: #4a7c7a;
+  line-height: 1.45;
+}
+
+/* Arrow */
+.adc__arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding-top: 52px;
+}
+
+.adc__arrow-label {
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c8c3b8;
+}
+
+@media (max-width: 540px) {
+  .adc__layout {
+    grid-template-columns: 1fr;
+  }
+  .adc__arrow {
+    flex-direction: row;
+    padding-top: 0;
+    transform: rotate(90deg);
+    justify-content: center;
+  }
+}

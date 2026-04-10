@@ -1,0 +1,398 @@
+/* ── Wrapper ──────────────────────────────────────────────── */
+.apoe-anim {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.apoe-anim__caption {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+/* ── App shell ────────────────────────────────────────────── */
+.apoe-anim__app {
+  border: 1px solid #e0dbd2;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fafaf8;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.05);
+}
+
+/* ── Tool header ──────────────────────────────────────────── */
+.apoe-anim__tool-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 18px 11px;
+  border-bottom: 1px solid #e0dbd2;
+  background: white;
+}
+
+.apoe-anim__tool-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.apoe-anim__help {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #d1cec8;
+  background: #f3f1ee;
+  color: #8A857E;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  font-family: inherit;
+}
+
+/* ── Screen 1 ─────────────────────────────────────────────── */
+.apoe-anim__screen1 {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: apoeIn 0.3s ease both;
+}
+
+/* ── Filter bar ───────────────────────────────────────────── */
+.apoe-anim__filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Gene name input */
+.apoe-anim__gene-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 120px;
+  padding: 6px 12px;
+  border: 1.5px solid #d1cec8;
+  border-radius: 100px;
+  background: white;
+  font-size: 12px;
+  color: #1a1a1a;
+  transition: border-color 0.2s ease;
+}
+
+.apoe-anim__gene-input--active {
+  border-color: #4ecdc4;
+  box-shadow: 0 0 0 2px rgba(78,205,196,0.12);
+}
+
+.apoe-anim__placeholder { color: #aaa; }
+
+.apoe-anim__gene-chip {
+  font-weight: 700;
+  color: #1a535c;
+}
+
+.apoe-anim__cursor {
+  display: inline-block;
+  width: 1.5px;
+  height: 12px;
+  background: #4ecdc4;
+  animation: apoeBlink 0.9s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes apoeBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Dropdowns */
+.apoe-anim__dropdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 1.5px solid #d1cec8;
+  border-radius: 6px;
+  background: white;
+  font-size: 12px;
+  color: #6b6b6b;
+  cursor: default;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.apoe-anim__dropdown--set {
+  border-color: #4ecdc4;
+  color: #1a535c;
+  font-weight: 600;
+  background: #f0fffe;
+}
+
+.apoe-anim__caret {
+  font-size: 10px;
+  color: #aaa;
+}
+
+/* ── Analysis cards ───────────────────────────────────────── */
+.apoe-anim__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.apoe-anim__card {
+  border: 1.5px solid #e0dbd2;
+  border-radius: 8px;
+  padding: 12px 13px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: default;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apoe-anim__card--selected {
+  border-color: #4ecdc4;
+  box-shadow: 0 0 0 3px rgba(78,205,196,0.15);
+  background: #f0fffe;
+}
+
+.apoe-anim__card-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+}
+
+.apoe-anim__card-desc {
+  font-size: 10.5px;
+  color: #8A857E;
+  line-height: 1.5;
+}
+
+/* ── Submit ───────────────────────────────────────────────── */
+.apoe-anim__submit {
+  align-self: flex-start;
+  padding: 8px 24px;
+  border-radius: 100px;
+  border: 1.5px solid #d1cec8;
+  background: #f3f1ee;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #3A3530;
+  cursor: default;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.apoe-anim__submit--dim {
+  opacity: 0.45;
+}
+
+.apoe-anim__submit--pulse {
+  animation: apoePulse 0.5s ease;
+  background: #4ecdc4;
+  border-color: #4ecdc4;
+  color: white;
+}
+
+@keyframes apoePulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ── Screen 2 — Results ───────────────────────────────────── */
+.apoe-anim__screen2 {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: apoeIn 0.4s ease both;
+}
+
+@keyframes apoeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Result context chips ─────────────────────────────────── */
+.apoe-anim__results-context {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.apoe-anim__result-chip {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: #f0fffe;
+  border: 1px solid #b2ecea;
+  color: #1a535c;
+}
+
+.apoe-anim__result-chip--analysis {
+  background: #fffce0;
+  border-color: #e8d840;
+  color: #7a6200;
+}
+
+.apoe-anim__result-sep {
+  font-size: 10px;
+  color: #ccc;
+}
+
+/* ── Results grid ─────────────────────────────────────────── */
+.apoe-anim__results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.apoe-anim__panel {
+  border: 1px solid #e0dbd2;
+  border-radius: 9px;
+  background: white;
+  padding: 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.apoe-anim__panel-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8A857E;
+}
+
+/* ── Bar chart ────────────────────────────────────────────── */
+.apoe-anim__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.apoe-anim__chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 80px;
+}
+
+.apoe-anim__bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.apoe-anim__bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  transform-origin: bottom;
+  animation: apoeBarGrow 0.5s ease both;
+  height: calc(var(--bar-h) * 80px);
+}
+
+.apoe-anim__bar--e4 { background: #4ecdc4; }
+.apoe-anim__bar--e3 { background: #a8e6e3; }
+
+@keyframes apoeBarGrow {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+.apoe-anim__chart-baseline {
+  height: 1.5px;
+  background: #e0dbd2;
+  margin-top: 2px;
+}
+
+.apoe-anim__chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: #8A857E;
+  margin-top: 3px;
+}
+
+.apoe-anim__legend-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.apoe-anim__legend-dot--e4 { background: #4ecdc4; }
+.apoe-anim__legend-dot--e3 { background: #a8e6e3; }
+
+/* ── Data table ───────────────────────────────────────────── */
+.apoe-anim__table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-size: 11px;
+}
+
+.apoe-anim__table-head {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  padding: 5px 8px;
+  background: #f3f1ee;
+  border-radius: 5px 5px 0 0;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #8A857E;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.apoe-anim__table-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  padding: 6px 8px;
+  border-bottom: 1px solid #f3f1ee;
+  font-size: 10.5px;
+  color: #374151;
+  animation: apoeRowIn 0.3s ease both;
+}
+
+@keyframes apoeRowIn {
+  from { opacity: 0; transform: translateX(-4px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.apoe-anim__table-row--highlight {
+  background: #f0fffe;
+  font-weight: 600;
+}
+
+.apoe-anim__gene-name {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.apoe-anim__fold { font-weight: 700; font-size: 10px; }
+.apoe-anim__fold--up { color: #16a34a; }
+.apoe-anim__fold--dn { color: #dc2626; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .apoe-anim__cards        { grid-template-columns: 1fr; }
+  .apoe-anim__results-grid { grid-template-columns: 1fr; }
+  .apoe-anim__filter-bar   { flex-direction: column; }
+}

@@ -1,0 +1,302 @@
+.pw {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Two-column grid ── */
+.pw__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── Surface container ── */
+.pw__surface {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pw__surface-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pw__surface-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ff6b6b;
+}
+
+.pw__surface-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.pw__surface-sub {
+  font-size: 10.5px;
+  color: #8a8a8a;
+}
+
+/* ── Frames ── */
+.pw__frame {
+  background: #f9f8f6;
+  border: 1.5px solid #e0dbd2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pw__frame--desktop {
+  border-radius: 8px;
+}
+
+.pw__frame--mobile {
+  max-width: 180px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border-width: 2px;
+  position: relative;
+}
+
+/* Browser chrome */
+.pw__browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  background: #efefec;
+  border-bottom: 1px solid #e0dbd2;
+}
+
+.pw__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d1cec8;
+}
+
+.pw__url-bar {
+  flex: 1;
+  height: 8px;
+  background: #e0dbd2;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* Phone notch */
+.pw__notch {
+  width: 50px;
+  height: 12px;
+  background: #e0dbd2;
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+}
+
+/* Page area */
+.pw__page {
+  padding: 12px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pw__page--mobile {
+  padding: 8px 10px 14px;
+  gap: 6px;
+}
+
+/* ── Wireframe elements ── */
+.pw__wf-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e8e4dc;
+}
+
+.pw__wf-block {
+  background: #e0dbd2;
+  border-radius: 3px;
+}
+
+.pw__wf-block--title { height: 10px; width: 65%; }
+.pw__wf-block--sub   { height: 7px;  width: 45%; }
+.pw__wf-block--line  { height: 6px;  width: 100%; }
+.pw__wf-block--short { width: 70% !important; }
+
+/* Step indicator */
+.pw__steps-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.pw__step-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e0dbd2;
+  font-size: 8px;
+  font-weight: 700;
+  color: #9a9590;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pw__step-dot--active {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* Form */
+.pw__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pw__field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pw__field--row {
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.pw__field-label {
+  height: 6px;
+  width: 30%;
+  background: #ccc9c2;
+  border-radius: 2px;
+}
+
+.pw__field-input {
+  height: 16px;
+  background: white;
+  border: 1px solid #e0dbd2;
+  border-radius: 4px;
+}
+
+.pw__field-input--tall { height: 28px; }
+.pw__field-input--half { flex: 1; height: 20px; }
+
+.pw__wf-btn {
+  height: 20px;
+  width: 50px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.pw__wf-btn--ghost  { background: white; border: 1px solid #e0dbd2; }
+.pw__wf-btn--filled { background: #ff6b6b; }
+
+/* Mobile elements */
+.pw__chip {
+  height: 14px;
+  width: 60px;
+  background: #ffe4e4;
+  border-radius: 100px;
+  align-self: flex-start;
+}
+
+.pw__section-head {
+  height: 7px;
+  width: 40%;
+  background: #ff6b6b;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.pw__term-row {
+  display: flex;
+  gap: 5px;
+}
+
+.pw__term-pill {
+  height: 12px;
+  width: 48px;
+  background: #ffe4e4;
+  border-radius: 100px;
+}
+
+.pw__divider {
+  height: 1px;
+  background: #e8e4dc;
+  margin: 2px 0;
+}
+
+.pw__wf-cta {
+  height: 20px;
+  background: #ff6b6b;
+  border-radius: 6px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.pw__caption {
+  font-size: 11px;
+  color: #8a8a8a;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Flow connector ── */
+.pw__flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 16px;
+  background: #f9f8f6;
+  border: 1px solid #e8e4dc;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.pw__flow-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #374151;
+}
+
+.pw__flow-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pw__flow-arrow {
+  font-size: 13px;
+  color: #ccc9c2;
+}
+
+@media (max-width: 560px) {
+  .pw__grid { grid-template-columns: 1fr; }
+  .pw__flow { flex-direction: column; align-items: flex-start; }
+  .pw__flow-arrow { transform: rotate(90deg); }
+}

@@ -1,0 +1,322 @@
+/* ── Wrapper ──────────────────────────────────────────────── */
+.hev {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+}
+
+.hev__caption {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/* ── Two-col layout ───────────────────────────────────────── */
+.hev__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ── Browser chrome ───────────────────────────────────────── */
+.hev__interface {
+  position: relative;
+}
+
+.hev__browser-chrome {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.hev__browser-bar {
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hev__browser-url {
+  font-size: 9px;
+  color: #9ca3af;
+  font-family: monospace;
+}
+
+.hev__browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.hev__browser-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+
+/* ── Viewport ─────────────────────────────────────────────── */
+.hev__viewport {
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ── Mini genome strip ────────────────────────────────────── */
+.hev__genome-strip {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hev__genome-ruler {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    #d1d5db 0px, #d1d5db 1px,
+    transparent 1px, transparent 16px
+  );
+  border-radius: 2px;
+  margin-bottom: 2px;
+}
+
+.hev__genome-track {
+  height: 8px;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+.hev__genome-track--1 { background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 40%, transparent 100%); width: 85%; }
+.hev__genome-track--2 { background: linear-gradient(90deg, #10b981 20%, #059669 55%, transparent 100%); width: 70%; }
+.hev__genome-track--3 { background: repeating-linear-gradient(90deg, #f59e0b 0, #f59e0b 3px, transparent 3px, transparent 9px); width: 90%; }
+
+/* ── Track groups ─────────────────────────────────────────── */
+.hev__tracks {
+  max-height: 240px;
+  overflow: hidden;
+}
+
+.hev__track-group {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.hev__track-heading {
+  background: #e5e7eb;
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #374151;
+  padding: 3px 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.hev__track-rows {
+  padding: 2px 0;
+}
+
+.hev__track-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-bottom: 1px solid #f9fafb;
+}
+
+.hev__track-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  background: white;
+  flex-shrink: 0;
+}
+
+.hev__track-dot--on {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.hev__track-name {
+  flex: 1;
+  font-size: 8px;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hev__track-controls {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.hev__track-btn {
+  font-size: 7px;
+  color: #6b7280;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 1px 4px;
+  border-radius: 2px;
+  cursor: default;
+}
+
+.hev__track-actions {
+  display: flex;
+  gap: 6px;
+  padding: 2px 8px 3px;
+  justify-content: flex-end;
+}
+
+.hev__hide-all,
+.hev__show-all {
+  font-size: 7.5px;
+  color: #3b82f6;
+  cursor: default;
+  text-decoration: underline;
+}
+
+/* ── Callout annotations ──────────────────────────────────── */
+.hev__annotations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hev__ann {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.15));
+}
+
+.hev__ann-num {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: white;
+  font-size: 8px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hev__ann-label {
+  font-size: 8.5px;
+  font-weight: 600;
+  background: #1e293b;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 6px;
+  white-space: nowrap;
+}
+
+/* ── Findings panel ───────────────────────────────────────── */
+.hev__findings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hev__findings-heading {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.hev__findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hev__finding {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+  padding: 9px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hev__finding-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hev__finding-num {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #1e293b;
+  color: white;
+  font-size: 8px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hev__finding-heuristic {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #6b7280;
+  flex: 1;
+}
+
+.hev__finding-text {
+  font-size: 11px;
+  color: #374151;
+  line-height: 1.55;
+  margin: 0;
+  padding-left: 22px;
+}
+
+/* ── Severity badges ──────────────────────────────────────── */
+.hev__sev {
+  font-size: 8px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 100px;
+}
+
+.hev__sev--high { background: #fee2e2; color: #dc2626; }
+.hev__sev--med  { background: #fef3c7; color: #d97706; }
+.hev__sev--low  { background: #f0fdf4; color: #16a34a; }
+
+/* ── Legend ───────────────────────────────────────────────── */
+.hev__legend {
+  display: flex;
+  gap: 12px;
+  padding-top: 4px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hev__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9.5px;
+  color: #6b7280;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hev__layout { grid-template-columns: 1fr; }
+}
