@@ -20,6 +20,8 @@ import HiFiScikit from '../components/HiFiScikit';
 import HiFiPoster from '../components/HiFiPoster';
 import PosterPersonas from '../components/PosterPersonas';
 import PosterWireframes from '../components/PosterWireframes';
+import PosterFlowDiagram from '../components/PosterFlowDiagram';
+import PosterProductAnimation from '../components/PosterProductAnimation';
 import HiFiRAGChat from '../components/HiFiRAGChat';
 import HeuristicEval from '../components/HeuristicEval';
 import UCSCFeedback from '../components/UCSCFeedback';
@@ -49,6 +51,8 @@ const ANIMATION_COMPONENTS = {
   HiFiPoster: <HiFiPoster />,
   PosterPersonas: <PosterPersonas />,
   PosterWireframes: <PosterWireframes />,
+  PosterFlowDiagram: <PosterFlowDiagram />,
+  PosterProductAnimation: <PosterProductAnimation />,
   HiFiRAGChat: <HiFiRAGChat />,
   HeuristicEval: <HeuristicEval />,
   UCSCFeedback: <UCSCFeedback />,
@@ -244,7 +248,7 @@ export default function CaseStudy() {
             </div>
 
             {/* Two-col: text left, cover image right */}
-            <div className={`case-study__hero-body${project.coverImage ? ' case-study__hero-body--split' : ''}`}>
+            <div className="case-study__hero-body">
               <div className="case-study__hero-text">
                 <h1 className="case-study__title serif">{project.title}</h1>
                 <p className="case-study__tagline">{project.tagline}</p>
@@ -262,15 +266,6 @@ export default function CaseStudy() {
                 )}
               </div>
 
-              {project.coverImage && (
-                <div className="case-study__hero-img-wrap" aria-hidden="true">
-                  <img
-                    src={project.coverImage}
-                    alt=""
-                    className="case-study__hero-img"
-                  />
-                </div>
-              )}
             </div>
             <div className="case-study__hero-meta">
               <div className="case-study__hero-col">

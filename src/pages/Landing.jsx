@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './Landing.css';
 
-const FEATURED_IDS = ['project-alpha', 'project-gamma', 'project-eta'];
+const FEATURED_IDS = ['self-service-analysis-platform', 'apoe-associated-gene-expression-explorer','ai-generated-short-form-visual-companion-for-scientific-posters'];
 
 const CATEGORY_COLOR = Object.fromEntries(CATEGORIES.map(c => [c.id, c.color]));
 
@@ -23,7 +23,7 @@ export default function Landing() {
           <br/>
           <div className="hero__inner">
             <h1 className="hero__headline">
-              3+ years building interfaces in Bioinformatics to enrich user's {' '}
+              3 years building interfaces in Bioinformatics to enrich user's {' '}
               <button className="hero__cat-link" style={{ '--cat-color': '#7c4dbd' }} data-count={`${getProjectsByCategory('data-retrieval').length} projects`} onClick={() => navigate('/projects/data-retrieval')}>
                 data retrieval
               </button>
@@ -84,17 +84,10 @@ function FeaturedWork({ navigate }) {
               <div className="fw-card__top">
                 <span className="fw-card__index">0{i + 1}</span>
                 <span className="fw-card__company">{project.company} · {project.year}</span>
-                {project.maturity && (
-                  <span className={`fw-card__maturity fw-maturity--${
-                    project.maturity === 'Shipped Product' ? 'green' :
-                    project.maturity === 'Interactive Prototype' ? 'amber' :
-                    project.maturity === 'Design Exploration' ? 'purple' : 'slate'
-                  }`}>
-                    <span className="fw-card__dot" />
-                    {project.maturity.toUpperCase()}
-                  </span>
-                )}
               </div>
+              {(project.maturity || project.evidence) && (
+                <FwBadge maturity={project.maturity} evidence={project.evidence} />
+              )}
 
               <h2 className="fw-card__title serif">{project.title}</h2>
               <p className="fw-card__tagline">{project.tagline}</p>
@@ -127,6 +120,42 @@ function FeaturedWork({ navigate }) {
         })}
       </div>
     </div>
+  );
+}
+
+const FW_MATURITY_META = {
+  'Deployed Solution':   { dotClass: 'fw-dot--green', tip: 'Built, launched and in use' },
+  'Prototyped Solution': { dotClass: 'fw-dot--amber', tip: 'Functionality tested by users' },
+  'Concept Exploration': { dotClass: 'fw-dot--teal',  tip: 'Idea turned into a design concept' },
+};
+
+const FW_EVIDENCE_META = {
+  'Validated Impact': 'Used by real teams with measurable outcomes',
+  'Observed Impact':  'Known to be in use, but no hard metrics captured',
+  'Tested Concept':   'Concept validated through user feedback',
+  'Untested Concept': 'Prototype with no feedback yet',
+};
+
+function FwBadge({ maturity, evidence }) {
+  const m = FW_MATURITY_META[maturity] ?? { dotClass: 'fw-dot--slate', tip: '' };
+  return (
+    <span className="fw-badge">
+      <span className={`fw-badge__dot ${m.dotClass}`} />
+      <span className="fw-badge__maturity">{maturity}</span>
+      {evidence && (
+        <>
+          <span className="fw-badge__sep">·</span>
+          <span className="fw-badge__evidence">{evidence}</span>
+        </>
+      )}
+      <span className="fw-badge__info" aria-hidden="true">
+        ?
+        <span className="fw-badge__tooltip">
+          <strong>{maturity}</strong><br />{m.tip}
+          {evidence && <><br /><br /><strong>{evidence}</strong><br />{FW_EVIDENCE_META[evidence]}</>}
+        </span>
+      </span>
+    </span>
   );
 }
 

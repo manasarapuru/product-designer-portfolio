@@ -124,10 +124,7 @@ export default function FlowDiagram() {
         </div>
       </div> */}
 
-      {/* System note */}
-      <p className="fd__note">
-        No Bioinformatics team member involved after initial setup — the system handles retrieval, processing, and delivery autonomously.
-      </p>
+
     </div>
   );
 }

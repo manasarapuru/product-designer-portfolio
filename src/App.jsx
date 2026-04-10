@@ -54,7 +54,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ dark, toggleDark: () => setDark(d => !d) }}>
       <IntroContext.Provider value={{ replayIntro: handleIntroReplay }}>
-        <BrowserRouter>
+        <BrowserRouter basename="/product-designer-portfolio/">
           {showIntro && <Intro onDone={handleIntroDone} />}
           <AnimatedRoutes />
         </BrowserRouter>

@@ -18,17 +18,13 @@ export default function AboutMe() {
             <h1 className="resume__name serif">Manasa Rapuru</h1>
             <p className="resume__title">Product Designer · Developer · Bioinformatician</p>
           </div>
-          <a href="#" className="resume__download" aria-label="Download resume PDF">
+          <a href="https://drive.google.com/file/d/17uHWBSn9SP_JcbUcawUrgrM0T332Wn3-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume__download" aria-label="Download resume PDF">
             <DownloadIcon />
             Download Resume
           </a>
         </div>
 
-        <div className="resume__summary">
-          <p className="resume__summary-text">
-            3+ years designing data-heavy, decision-critical tools. Background in bioinformatics — I understand the domain, not just the interface. I code what I design.
-          </p>
-        </div>
+
 
         <div className="resume__tabs" role="tablist">
           {TABS.map(t => (
@@ -66,14 +62,17 @@ function WhoIAm() {
         <img src="/avatar.png" alt="Manasa Rapuru" className="whoiam__photo" />
         <div>
           <span className="whoiam__label"></span>
-          <p className="whoiam__lead serif">
-            I combine cognitive science principles with UX to design complex systems that align with mental models and minimize cognitive load.
+          <p className="whoiam__body">
+            Bioinformatics combines computational methods with biology to analyze complex data. Many of its tools were built when <strong>technical capability mattered more than usability</strong>, resulting in powerful but often difficult-to-use interfaces. This creates steep learning curves, requiring scientists to spend more time learning how to use tools rather than focusing on the insights they produce.
           </p>
           <p className="whoiam__body">
-            I'm driven by designing products that turn complexity into clarity. Working in bioinformatics exposed me to tools that were technically powerful but hard to use — showing me how even the best systems can fall short without thoughtful design. That experience shaped my approach: designing products that match users' mental models, reduce cognitive load, and make complex systems intuitive, efficient, and impactful.
+            Having worked as <strong>both a developer and a user</strong> of these systems in the field, I experienced this friction firsthand and it became clear that <strong>usability isn't optional</strong>. When tools are hard to use, good science gets slowed down or missed entirely. That experience drove me to realize the impact of thoughtful interface design .
           </p>
           <p className="whoiam__body">
-            I believe great design isn't decoration. It's structure. My work strips away noise, surfaces what matters, and guides people to confident action without friction.
+            While my primary skills are rooted in bioinformatics analysis and coding, I naturally gravitated toward product designer–like roles in the past few years. Through those projects I worked on bridging the gap between technical systems and the people using them. That <strong>end-to-end perspective</strong> shapes how I think about every design decision.
+          </p>
+          <p className="whoiam__body">
+            Outside of work, I spend my time crocheting, painting, cooking, and exploring animation techniques.
           </p>
         </div>
       </div>
@@ -83,9 +82,6 @@ function WhoIAm() {
       <div className="whoiam__section">
         <span className="whoiam__label">How I Work</span>
         <p className="whoiam__lead serif">A loop, not a line.</p>
-        <p className="whoiam__body">
-          From user flows to high-fidelity, through prototyping and real feedback — I work in cycles that keep improving until the design earns its place. Each pass asks: does this solve the right thing for the right person?
-        </p>
         <div className="whoiam__process-svg-wrap">
           <svg className="whoiam__process-svg" viewBox="0 0 340 340" aria-label="Design process loop">
             <defs>
@@ -116,20 +112,13 @@ function WhoIAm() {
             <circle cx="88"  cy="104" r="16" fill="#F0EBE0" stroke="#8A857E" strokeWidth="1.5"/>
             <text x="88"  y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3A3530">7</text>
             <text x="170" y="36"  textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">User Flows</text>
-            <text x="170" y="47"  textAnchor="middle" fontSize="6"   fill="#8A857E">Define logic</text>
             <text x="272" y="83"  textAnchor="start"  fontSize="7.5" fontWeight="700" fill="#1A1512">Wireframes</text>
-            <text x="272" y="94"  textAnchor="start"  fontSize="6"   fill="#8A857E">Structure experience</text>
             <text x="272" y="162" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">Vibe Coding</text>
-            <text x="272" y="173" textAnchor="middle" fontSize="6"   fill="#8A857E">Explore &amp; validate</text>
             <text x="215" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">High-Fidelity UI</text>
-            <text x="215" y="305" textAnchor="middle" fontSize="6"   fill="#8A857E">Refine &amp; hierarchy</text>
             <text x="125" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">Prototype</text>
-            <text x="125" y="305" textAnchor="middle" fontSize="6"   fill="#8A857E">Test usability</text>
             <text x="48"  y="190" textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Handoff &amp; Ship</text>
-            <text x="48"  y="201" textAnchor="end"    fontSize="6"   fill="#8A857E">Enable build</text>
             <text x="68"  y="83"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Feedback &amp;</text>
             <text x="68"  y="93"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Iteration</text>
-            <text x="68"  y="104" textAnchor="end"    fontSize="6"   fill="#8A857E">Prioritize improvements</text>
             <text x="170" y="166" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="#3A3530">DESIGN</text>
             <text x="170" y="178" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="#3A3530">LOOP</text>
           </svg>
@@ -221,7 +210,7 @@ function Experience() {
 
 /* ── Education ──────────────────────────────────────────── */
 const EDUCATION = [
-  { degree: 'User Experience Research And Design', institution: 'Coursera', period: 'In Progress' },
+  { degree: 'User Experience Research and Design Specialization', institution: 'Coursera', period: 'In Progress' },
   { degree: 'AI Developer Certification',          institution: 'Coursera', period: 'Oct 2025 – Jan 2026' },
   { degree: 'Full Stack Developer Certification',  institution: 'Coursera', period: 'Nov 2023 – Apr 2024' },
   { degree: 'M.S. Bioinformatics',                 institution: 'Boston University', period: '2021 – 2023' },
@@ -253,8 +242,8 @@ function Education() {
 /* ── Skills ─────────────────────────────────────────────── */
 const SKILL_GROUPS = [
   { label: 'Design',          color: '#ff6b6b', soft: '#fff0f0', skills: ['Figma', 'Prototyping', 'Design Systems', 'User Flows', 'Wireframing', 'High-Fidelity UI', 'UX Research'] },
-  { label: 'Development',     color: '#4ecdc4', soft: '#d4f5f3', skills: ['React', 'JavaScript', 'HTML & CSS', 'Python', 'R', 'HPC', 'Git'] },
-  { label: 'Domain',          color: '#c8a800', soft: '#fffce0', skills: ['Bioinformatics', 'Genomics',  'Multi-omics', 'Research Methods'] },
+  { label: 'Development',     color: '#4ecdc4', soft: '#d4f5f3', skills: ['React', 'JavaScript', 'HTML & CSS', 'Python', 'R', 'HPC', 'Git','FastAPI','Flask','Django','Bash'] },
+  { label: 'Domain',          color: '#c8a800', soft: '#fffce0', skills: ['Bioinformatics', 'Genomics',  'Transcriptomics', 'Microbiology','Immunology'] },
   // { label: 'Tools & Process', color: '#1a535c', soft: '#d4eced', skills: ['AI-assisted design', 'Notion', 'Linear', 'Handoff & Specs', 'Agile / Scrum'] },
 ];
 

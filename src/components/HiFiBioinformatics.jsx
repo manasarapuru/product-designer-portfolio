@@ -1,11 +1,5 @@
 import './HiFiBioinformatics.css';
 
-const TABLE_ROWS = [
-  { id: 'S-001', tissue: 'Hippocampus', genotype: 'APOE4/4', expression: '2.84', status: 'high' },
-  { id: 'S-002', tissue: 'Cortex',      genotype: 'APOE3/4', expression: '1.62', status: 'mid' },
-  { id: 'S-003', tissue: 'Cerebellum',  genotype: 'APOE3/3', expression: '0.91', status: 'low' },
-  { id: 'S-004', tissue: 'Brainstem',   genotype: 'APOE4/4', expression: '2.31', status: 'high' },
-];
 
 export default function HiFiBioinformatics() {
   return (
@@ -84,32 +78,33 @@ export default function HiFiBioinformatics() {
           </div>
         </div>
 
-        {/* Data table */}
+        {/* Data table — wireframe style */}
         <div className="hbio__tile hbio__tile--wide">
           <span className="hbio__tag">Data table — sample results</span>
           <div className="hbio__table-wrap">
-            <table className="hbio__table">
-              <thead>
-                <tr>
-                  <th>Sample ID</th>
-                  <th>Tissue</th>
-                  <th>Genotype</th>
-                  <th>Expression</th>
-                  <th>Level</th>
-                </tr>
-              </thead>
-              <tbody>
-                {TABLE_ROWS.map(row => (
-                  <tr key={row.id}>
-                    <td className="hbio__id">{row.id}</td>
-                    <td>{row.tissue}</td>
-                    <td className="hbio__mono">{row.genotype}</td>
-                    <td className="hbio__num">{row.expression}</td>
-                    <td><span className={`hbio__badge hbio__badge--${row.status}`}>{row.status}</span></td>
-                  </tr>
+            <div className="hbio__wf-table">
+              {/* Header row */}
+              <div className="hbio__wf-row hbio__wf-row--head">
+                {[40, 70, 60, 55, 45].map((w, i) => (
+                  <div key={i} className="hbio__wf-cell">
+                    <div className="hbio__wf-line hbio__wf-line--header" style={{ width: `${w}%` }} />
+                  </div>
                 ))}
-              </tbody>
-            </table>
+              </div>
+              {/* Data rows */}
+              {[[30,65,55,35,38],[28,58,50,32,42],[32,70,52,30,36],[29,62,55,34,38]].map((cols, ri) => (
+                <div key={ri} className={`hbio__wf-row${ri % 2 === 0 ? ' hbio__wf-row--alt' : ''}`}>
+                  {cols.map((w, ci) => (
+                    <div key={ci} className="hbio__wf-cell">
+                      {ci === 4
+                        ? <div className={`hbio__wf-badge hbio__wf-badge--${['high','mid','low','high'][ri]}`} />
+                        : <div className="hbio__wf-line" style={{ width: `${w}%` }} />
+                      }
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

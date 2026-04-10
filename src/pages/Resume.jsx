@@ -263,7 +263,7 @@ function Experience() {
 /* ── Education ──────────────────────────────────────────── */
 const EDUCATION = [
   {
-    degree: 'User Experience Research And Design',
+    degree: 'User Experience Research and Design Specialization',
     institution: 'Coursera ',
     period: ' In Progress',
     note: 'Dissertation on protein structure prediction using AlphaFold2. Published in [Journal].',

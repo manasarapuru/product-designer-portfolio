@@ -3,7 +3,7 @@ export const CATEGORIES = [
     id: 'learning',
     label: 'Learning',
     tagline: 'Designing interfaces that help users build understanding and grow confidence.',
-    description: 'I approach complex, data-heavy systems with a focus on clarity and comprehension. My goal is to reduce cognitive load by structuring information in a way that is intuitive and easy to navigate. I achieve this through clear information hierarchy, progressive disclosure, and thoughtful interaction patterns. The result is an experience that allows users to understand and act without hesitation.',
+    description: 'I design interfaces that guide users through unfamiliar or complex territory. The philosophy is focused on progressive disclosure and surfacing the right information at the right moment so users can build understanding without feeling overwhelmed.',
     color: '#e8612a',
     softColor: '#fdeee7',
     icon: 'brain',
@@ -12,7 +12,7 @@ export const CATEGORIES = [
     id: 'exploration',
     label: 'Exploration',
     tagline: 'Building spaces where users can freely discover, connect ideas, and move forward.',
-    description: 'I view design as a facilitator of alignment across teams and disciplines. My work focuses on creating interfaces and systems that support clear communication and shared understanding. I incorporate visibility into workflows, shared states, and collaborative touchpoints to reduce ambiguity. This enables teams to work more cohesively and efficiently.',
+    description: 'I design interfaces that give users freedom to navigate and discover without getting lost. The philosophy is focused on reducing cognitive density and making complex systems feel open and legible rather than overwhelming.',
     color: '#2e8c6e',
     softColor: '#e0f5ee',
     icon: 'people',
@@ -21,7 +21,7 @@ export const CATEGORIES = [
     id: 'data-retrieval',
     label: 'Data Retrieval',
     tagline: 'Surfacing the right information at the right moment so users can act with confidence.',
-    description: 'I design interfaces that go beyond presenting information to actively support decision-making. This involves structuring data to highlight key insights and guide users toward next steps. I use visual hierarchy, data prioritization, and contextual cues to make information actionable. The goal is to enable faster, more confident decisions.',
+    description: 'I design interfaces that streamline how users access and retrieve data. The philosophy is focused on cutting out unnecessary steps and reducing navigation overhead.',
     color: '#7c4dbd',
     softColor: '#ede8f8',
     icon: 'target',
@@ -30,8 +30,8 @@ export const CATEGORIES = [
 
 export const PROJECTS = [
   {
-    id: 'project-alpha',
-    title: 'Self-Service Analytics Platform',
+    id: 'self-service-analysis-platform',
+    title: 'Self-Service Analysis Platform',
     tagline: '',
     categories: ['data-retrieval'],
     coverColor: '#000000',
@@ -46,43 +46,15 @@ export const PROJECTS = [
     links: [],
     caseStudy: {
       product:
-        'A self-service analytics application that automates complex analyses, allowing users to generate insights independently without relying on other teams.',
+        'A self-service analysis application that automates complex analyses, allowing users to generate insights independently without relying on other teams.',
       productMedia: { component: 'SelfServiceAnimation' , caption: 'Representation of the product\'s core features'},
 
       context:
         'A supporting internal team was servicing requests coming from a customer-facing team. These requests required manual data retrieval, processing, and formatting to be done by the supporting team. The requests were not always complex, but they did pull the supporting team away from higher-priority work and left the customer-facing team waiting up to days for answers. Starting from a stakeholder brief, I mapped both teams\' workflows to identify where the friction actually lived before any design decisions were made.',
       contextMedia: { component: 'TeamsChatAnimation', caption: 'A typical data request could take up to 1-2 days depending on support team member\'s workload.' },
 
-      personas: [
-        {
-          role: 'Customer-Facing Team Member',
-          need: '',
-          quote: '',
-          goals: [
-            'Get timely insights without waiting on other teams',
-          ],
-          painPoints: [
-            'Blocked by cross-team availability and response times',
-            'Has to mediate any changes to requests, which adds delays', 
-          ],
-        },
-        {
-          role: 'Supporting Team Member',
-          need: '',
-          quote: '',
-          goals: [
-            'Reduce servicing of repeated requests',
-            'Finish requests without putting aside core responsibilities',
-          ],
-          painPoints: [
-            'Puts aside core responsibilities to field these requests manually',
-            'Sometimes data is not readily available so they have to do ad-hoc data retrieval and processing to fulfill requests',
-          ],
-        },
-      ],
-
       problemState:
-        'Dependence on multiple teams increased turnaround time, created overhead on both sides of every handoff. The process was inefficient and frustrating for both teams, with the customer-facing team left waiting for insights and the supporting team pulled away from their core work to service requests. For the business, delayed data access slowed response to customer needs and hindered timely action.',
+        'Dependence on multiple teams increased turnaround time, created overhead on both sides in every handoff. The process was inefficient and frustrating for both teams, with the customer-facing team left waiting for insights and the supporting team pulled away from their core work to service requests. For the business, delayed data access slowed response to customer needs and hindered timely action.',
       problemMedia: '',
 
       designQuestion:
@@ -169,26 +141,26 @@ export const PROJECTS = [
       designSystemMedia: '',
       designSystemMap: null,
       processSteps: [
+        { step: 'Personas', notes: 'Mapped the two teams involved to understand their goals, blockers, and where their workflows created friction for each other.', media: { component: 'UserPersonas' } },
         { step: 'Flow Mapping', notes: 'Mapped end-to-end workflows for both the customer-facing team and supporting team and the underlying backend pipelines.', media: { component: 'FlowDiagram' } },
         { step: 'Wireframes', notes: 'Wireframed to illustrate the functionality and linear experience — each screen reflects one step in the user journey through the tool.', media: { src: '/self_wireframe.png', caption: 'Screens of tool' } },
-        { step: 'Develop', notes: 'Built early prototypes directly in Streamlit with SQL and Python to test feasibility alongside the design. Code and design evolved together.' },
+        { step: 'Develop', notes: 'Built early prototypes to test feasibility alongside the design. Code and design evolved together.' },
         {
           step: 'Design Decisions',
           notes: [
-            'Streamlit was chosen intentionally due to the project’s backend-heavy nature and tight timeline. The priority was building reliable data access and query logic, rather than investing time in a custom UI.',
+            '',
           ],
           designSystemMap: {
             systemContext: '',
             foundations: [
               'Single-page linear flow: upload → analyze → download',
-              'Streamlit defaults as the visual standard with no custom design system needed',
-              'Copy written for context, not data science terminology',
             ],
             components: [
-              'st.file_uploader: drag and drop CSV intake',
-              'st.button and st.progress: clear submit and feedback loop',
-              'st.download_button: zero-confusion result delivery',
-              'st.success and st.error: immediate status at every step',
+              'file uploader: drag and drop CSV intake',
+              'submission button: to trigger analysis',
+              'progress bar: shows feedback loop',
+              'download button: signals completion and next steps',
+              'success and error messages: immediate status at every step',
             ],
             interactionPatterns: [
               'One decision per screen with no branching or confusion',
@@ -197,7 +169,7 @@ export const PROJECTS = [
             designStrategyPoints: [
               'Reduce time-to-insight: one flow, no navigation overhead',
               'Eliminate handoffs: self-contained, no cross-team dependency',
-              'Non-technical first: Streamlit\'s constraint enforced plain language throughout',
+              'A prebuilt component library balanced development speed with a polished, consistent interface',
             ],
           },
           media: { component: 'HiFiButtons' },
@@ -355,8 +327,8 @@ export const PROJECTS = [
   }, */
 
   {
-    id: 'project-gamma',
-    title: 'Alzheimer\'s: APOE-Associated Gene Expression Explorer',
+    id: 'apoe-associated-gene-expression-explorer',
+    title: 'Alzheimer\'s: Gene Expression Explorer',
     tagline: '',
     categories: ['exploration'],
     coverColor: '#E4E8DD',
@@ -372,7 +344,7 @@ export const PROJECTS = [
         'A data exploration platform that visualizes analyzed data, enabling users to explore trends and relationships across disparate datasets.',
       productMedia: { component: 'APOEProductAnimation' },
       context:
-        `The lab was investigating APOE gene expression in relation to Alzheimer’s disease. They had collected multi-dimensional datasets for their research however had difficulty translating the data into actionable insights. Insights remained difficult to access due to fragmented storage across files and the absence of an interactive system for exploration.`,
+        `The lab was investigating gene expression in relation to Alzheimer’s disease. They had collected multi-dimensional datasets for their research however had difficulty translating the data into actionable insights. Insights remained difficult to access due to fragmented storage across files and the absence of an interactive system for exploration.`,
       contextMedia: '',
 
       problemState:
@@ -390,13 +362,13 @@ export const PROJECTS = [
       opportunityMedia: '',
 
       solutionGoal:
-        ['Centralize experimental data into a unified, interactive platform',
-         'Enable intuitive navigation across multiple data types and sources',
-         'Reduce cognitive load through clear structure and guided interactions',
-         'Support meaningful exploration through dynamic, responsive visualizations',
-         'Improve usability with onboarding and contextual guidance'],
+        ['Consolidate a fragmented multi-step workflow into a lightweight, unified interface',
+         'Reduce the number of screens and steps required to reach analysis results',
+         'Provide contextual guidance on analysis types so lab members could use the tool independently',
+         'Enable dynamic, parameter-driven visualizations that update without researcher support',
+         'Onboard non-technical users through a tutorial layer without adding friction to experienced users'],
       goalsMet:
-        ['Enabled lab members to quickly and intuitively access gene information','Surfaced previously hidden data and revealed connections that were not apparent before','Transformed fragmented, static datasets into a cohesive, actionable experience.', 'Supported independent exploration and interpretation of experimental results.', 'Accelerated insight generation and improved efficiency in analyzing datasets.'],
+        ['Reduced the analysis flow from 3 screens to 2 by consolidating filters inline with analysis selection', 'Lab members without programming backgrounds could explore gene expression data without needing researcher support', 'Added analysis type explanations that addressed the primary source of user confusion identified in prototype review', 'Dynamic parameter switching with instant visual updates replaced static, file-based data access', 'Tutorial overlay successfully introduced the platform to first-time users without interrupting the main workflow'],
 
       solutionSteps:[
         {label:'User Journey & Workflow Mapping',items:[
@@ -545,7 +517,7 @@ export const PROJECTS = [
   }, */
 
   {
-    id: 'project-epsilon',
+    id: 'ucsc-genome-browser-reimagined',
     title: 'UCSC Genome Browser Reimagined',
     tagline: 'A self-initiated redesign exploring density and hierarchy in scientific tooling.',
     categories: ['exploration'],
@@ -885,7 +857,7 @@ export const PROJECTS = [
   }, */
 
   {
-    id: 'project-eta',
+    id: 'ai-generated-short-form-visual-companion-for-scientific-posters',
     title: 'AI-Generated Short-Form Visual Companion for Scientific Posters',
     tagline: 'A design concept for making research posters legible to a time-constrained audience.',
     categories: ['learning'],
@@ -900,12 +872,12 @@ export const PROJECTS = [
     sector: 'Research Communication',
     tools: ['AI Model','Figma', 'React.js'],
     links: [
-      { label: 'LinkedIn Article', url: 'https://www.linkedin.com/pulse/exploring-ai-cognitive-assistant-scientific-posters-manasa-rapuru-v0y0c/?trackingId=lfjTD6xZQ7eYvOqVYkY7JA%3D%3D' },{ label: 'Prototype', url: '' },{ label: 'Feedback Form', url: 'https://forms.gle/iAWpz6ugb5Ekmf6T8' },
+      { label: 'LinkedIn Article', url: 'https://www.linkedin.com/pulse/exploring-ai-cognitive-assistant-scientific-posters-manasa-rapuru-v0y0c/?trackingId=lfjTD6xZQ7eYvOqVYkY7JA%3D%3D' },{ label: 'Feedback Form', url: 'https://forms.gle/iAWpz6ugb5Ekmf6T8' },
       ],
     caseStudy: {
       product:
         'A self-initiated design concept exploring whether AI could close the comprehension gap at academic poster sessions. The question driving it: what if a researcher could give every attendee a plain-language summary of their work, accessible in under five seconds, without being present to explain it? This is an exploration of that idea — not a shipped product, but a worked-through design hypothesis.',
-      productMedia: null,
+      productMedia: { component: 'PosterProductAnimation' },
       context:
         'This project started from personal experience. Having stood in front of posters as both a presenter and an audience member, and hearing the same frustration from peers, the problem felt worth exploring. Presenters spend weeks on research that attendees have maybe two minutes to absorb. The poster format has not changed, but the problem of comprehension under time pressure is real and consistent across conferences.',
       contextMedia: { component: 'PosterContextAnimation' },
@@ -941,7 +913,7 @@ export const PROJECTS = [
         { stat: 'Two open hypotheses', context: 'Does it improve comprehension? Is it necessary, or just convenient?' },
       ],
       impact:
-        'This is a design concept grounded in observed behaviour, not a shipped product. The hypothesis is that a plain-language AI summary, accessed in under five seconds via QR code, would meaningfully improve how quickly an attendee can assess whether a poster is worth deeper engagement. What I do not yet know is whether users would experience this as genuinely useful or as a layer of friction replacing the natural act of talking to the presenter. That tension is the most interesting thing to test.',
+        'This is a design concept grounded in observed behavior, not a shipped product. The hypothesis is that a plain-language AI summary, accessed in under five seconds via QR code, would meaningfully improve how quickly an attendee can assess whether a poster is worth deeper engagement. What I do not yet know is whether users would experience this as genuinely useful or as a layer of friction replacing the natural act of talking to the presenter. That tension is the most interesting thing to test.',
       impactMedia: '',
       improvements: 'The author submission flow assumes researchers will engage with it ahead of the conference — that assumption needs pressure-testing against the reality of last-minute preparation. The AI summary quality also depends heavily on what the author submits; a structured input guide or smart prompts would raise the floor on output quality without adding friction.',
 
@@ -949,7 +921,8 @@ export const PROJECTS = [
       designSystemMedia: '',
       designSystemMap: null,
       processSteps: [
-        { step: 'User Flows', notes: 'Mapped two separate journeys. The author flow: from deciding to add a QR code through to submitting content and having the artifact generated. The attendee flow: from spotting the QR code at a poster session through to reading the summary and deciding whether to engage deeper. Both flows needed to work independently but produce a connected result.', media: { component: 'PosterPersonas' } },
+        { step: 'Personas', notes: 'Identified two distinct users with different contexts, goals, and time constraints — the researcher presenting their work and the attendee trying to quickly assess relevance.', media: { component: 'PosterPersonas' } },
+        { step: 'User Flows', notes: 'Mapped two separate journeys. The author flow: from deciding to add a QR code through to submitting content and having the artifact generated. The attendee flow: from spotting the QR code at a poster session through to reading the summary and deciding whether to engage deeper. Both flows needed to work independently but produce a connected result.', media: { component: 'PosterFlowDiagram' } },
         { step: 'Wireframes', notes: 'Designed both surfaces separately. The author interface needed to feel lightweight enough that a researcher would use it in the days before a conference, not just ignore it. The artifact needed to be readable in under two minutes on a phone in a noisy room.', media: { component: 'PosterWireframes' } },
         { step: 'Vibe Coding', notes: 'Prototyped the AI summary generation pipeline in React.js to test how well AI-generated plain language matched attendee comprehension needs in early concept tests.' },
         {
@@ -975,7 +948,7 @@ export const PROJECTS = [
             ],
             designStrategyPoints: [
               'Zero friction entry: QR to content in under 5 seconds',
-              'Scientific rigour and plain language together, not a trade-off',
+              'Scientific rigor and plain language together, not a trade-off',
               'Structured storytelling matched to attendee reading behaviour',
             ],
             outcome: 'Helped attendees quickly grasp research and make informed decisions about which posters to engage with more deeply.',
@@ -993,7 +966,7 @@ export const PROJECTS = [
 
 /* export const PROJECTS = [
   {
-    id: 'project-alpha',
+    id: 'self-service-analysis-platform',
     title: 'Unified Data Dashboard',
     tagline: 'Turning fragmented analytics into a single source of truth.',
     categories: ['learning', 'data-retrieval'],
@@ -1089,7 +1062,7 @@ export const PROJECTS = [
   },
 
   {
-    id: 'project-gamma',
+    id: 'apoe-associated-gene-expression-explorer',
     title: 'Cross-Team Review Hub',
     tagline: 'One space for every stakeholder to align, annotate, and ship.',
     categories: ['exploration'],
@@ -1185,7 +1158,7 @@ export const PROJECTS = [
   },
 
   {
-    id: 'project-epsilon',
+    id: 'ucsc-genome-browser-reimagined',
     title: 'Onboarding Re-Architecture',
     tagline: 'Reducing time-to-value for complex B2B products.',
     categories: ['learning'],

@@ -66,7 +66,7 @@ export default function APOEProductAnimation() {
 
   return (
     <div className="apoe-anim">
-      <p className="apoe-anim__caption">Interactive prototype — APOE Gene Expression Explorer</p>
+      <p className="apoe-anim__caption">Interactive prototype — Gene Expression Explorer</p>
 
       <div className="apoe-anim__app">
         {/* ── Tool header ── */}

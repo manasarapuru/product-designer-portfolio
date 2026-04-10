@@ -2,19 +2,16 @@ import { useEffect, useState } from 'react';
 import './Intro.css';
 
 const TIMINGS = [
-  [300,   1],
-  [2200,  2],
-  [4700,  3],
-  [7200,  4],
-  [10400, 5],
-  [15400, 6],
-  [19900, 7],
-  [24100, 8],
-  [24600, 9],
-  [27600, 10],
-  [28600, 11],
+  [300,  1],  // start walking
+  [1000, 2],  // bubble 1
+  [3500, 3],  // bubble 2
+  [9500, 4],  // bubble 3
+  [12000, 5], // bubble 4
+  [13500, 6], // turned
+  [14300, 7], // door opens
+  [15300, 8], // zoom
 ];
-const TOTAL_MS = 29600;
+const TOTAL_MS = 16500;
 
 export default function Intro({ onDone }) {
   const [phase, setPhase] = useState(0);
@@ -25,11 +22,11 @@ export default function Intro({ onDone }) {
     return () => { timers.forEach(clearTimeout); clearTimeout(done); };
   }, [onDone]);
 
-  const walking = phase >= 1 && phase < 8;
-  const turned  = phase >= 8;
+  const walking = phase >= 1 && phase < 6;
+  const turned  = phase >= 6;
 
   return (
-    <div className={`intro${phase >= 11 ? ' intro--zoom' : ''}`}>
+    <div className={`intro${phase >= 8 ? ' intro--zoom' : ''}`}>
       <div className="intro__scene">
 
         <div className="intro__sky" />
@@ -40,39 +37,28 @@ export default function Intro({ onDone }) {
           <div key={i} className={`intro__sparkle intro__sparkle--${i % 5}`} style={{ '--i': i }} />
         ))}
 
-        {/* Sign */}
-        <div className="intro__sign">
-          <span className="intro__sign-text">✦ THIS WAY TO MANASA'S WORK ✦</span>
-        </div>
-
         {/* Door */}
-        <div className={`intro__door-wrap${phase >= 10 ? ' intro__door-wrap--open' : ''}`}>
+        <div className={`intro__door-wrap${phase >= 7 ? ' intro__door-wrap--open' : ''}`}>
           <div className="intro__door-frame">
             <div className="intro__door-panel">
               <div className="intro__door-window" />
               <div className="intro__door-knob" />
             </div>
           </div>
-          <div className={`intro__door-light${phase >= 10 ? ' intro__door-light--on' : ''}`} />
+          <div className={`intro__door-light${phase >= 7 ? ' intro__door-light--on' : ''}`} />
         </div>
 
         {/* Character + bubbles */}
         <div className={`intro__char${walking ? ' intro__char--walk' : ''}${turned ? ' intro__char--turned' : ''}`}>
 
-          <TypedBubble n={1} show={phase >= 2 && phase < 3}
+          <TypedBubble n={1} show={phase === 2}
             text="Hi, I'm Manasa 👋" />
           <TypedBubble n={2} show={phase === 3}
-            text="Product designer & developer" />
+            text="Product designer & developer. I've seen how poor usability impacts the work that depends on it so I design to change that." />
           <TypedBubble n={3} show={phase === 4}
-            text="I simplify data-heavy workflows into intuitive interfaces." />
+            text="If my work resonates, I'd love to connect." />
           <TypedBubble n={4} show={phase === 5}
-            text="My professional design experience & background is in Bioinformatics, but I work across domains with a focus on making complex knowledge comprehensible." />
-          <TypedBubble n={5} show={phase === 6}
-            text="I weave AI into my design process and product features to bring creative and impactful nuances to life 🤖" />
-          <TypedBubble n={6} show={phase === 7}
-            text="Thank you for visiting 😊 Feel free to reach out if my work resonates with you!" />
-          <TypedBubble n={7} show={phase >= 9 && phase < 11}
-            text="Without further ado, let's step into my world ✨" />
+            text="Let's step into my work ✨" />
 
           <SmoothGirl turned={turned} walking={walking} />
         </div>
