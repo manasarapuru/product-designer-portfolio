@@ -905,10 +905,7 @@ export const PROJECTS = [
     caseStudy: {
       product:
         'A self-initiated design concept exploring whether AI could close the comprehension gap at academic poster sessions. The question driving it: what if a researcher could give every attendee a plain-language summary of their work, accessible in under five seconds, without being present to explain it? This is an exploration of that idea — not a shipped product, but a worked-through design hypothesis.',
-      productMedia: [
-        { video: '/poster_author.mov', caption: 'Author interface — inputting research to generate the artifact', belowGrid: true },
-        { video: '/poster_artifact.mov', caption: 'The artifact — what attendees see after scanning the QR code', belowGrid: true },
-      ],
+      productMedia: null,
       context:
         'This project started from personal experience. Having stood in front of posters as both a presenter and an audience member, and hearing the same frustration from peers, the problem felt worth exploring. Presenters spend weeks on research that attendees have maybe two minutes to absorb. The poster format has not changed, but the problem of comprehension under time pressure is real and consistent across conferences.',
       contextMedia: { component: 'PosterContextAnimation' },
