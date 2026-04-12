@@ -9,7 +9,7 @@ const PERSONAS = [
     team: '',
     avatarBg: '#29b6f6',
     avatarShirt: '#1976d2',
-    quote: '"I just need the data — I shouldn\'t have to wait 2 days or explain what I need three times."',
+    quote: '',
     tagline: 'The Requester',
     tagColor: '#1976d2',
     tagBg: '#e3f2fd',
@@ -36,7 +36,7 @@ const PERSONAS = [
     team: '',
     avatarBg: '#ffb74d',
     avatarShirt: '#5c6bc0',
-    quote: '"I want to focus on real analysis, not manually pulling the same reports every week for 6 different people."',
+    quote: '',
     tagline: 'The Responder',
     tagColor: '#5c3d99',
     tagBg: '#f0eeff',
@@ -84,7 +84,7 @@ function PersonaCard({ p }) {
             <span className="up__role">{p.role}</span>
             {/* <span className="up__team">● {p.team} team · Age {p.age}</span> */}
           </div>
-          <blockquote className="up__quote">{p.quote}</blockquote>
+          {p.quote && <blockquote className="up__quote">{p.quote}</blockquote>}
         </div>
 
         {/* Middle: goals + pain side by side */}

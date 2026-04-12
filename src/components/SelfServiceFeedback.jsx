@@ -17,7 +17,6 @@ const GROUPS = [
     items: [
       { q: 'Did this streamline your work?', a: 'Yes' },
       { q: 'Did you feel it was necessary?', a: 'Yes' },
-      { q: 'Was the cross-team interaction necessary?', a: 'Could have been avoided — but no one did it before, so this was very useful', nuanced: true },
     ],
   },
   {

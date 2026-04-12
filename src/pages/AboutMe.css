@@ -704,6 +704,11 @@
   padding: 8px 0;
 }
 
+.whoiam__process-svg-wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .process-svg {
   width: 100%;
   max-width: 280px;

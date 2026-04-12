@@ -31,7 +31,7 @@ export const CATEGORIES = [
 export const PROJECTS = [
   {
     id: 'self-service-analysis-platform',
-    title: 'Self-Service Analysis Platform',
+    title: 'Self-Service Tool to Enable Cross-Team Data Access',
     tagline: '',
     categories: ['data-retrieval'],
     coverColor: '#000000',
@@ -46,7 +46,7 @@ export const PROJECTS = [
     links: [],
     caseStudy: {
       product:
-        'A self-service analysis application that automates complex analyses, allowing users to generate insights independently without relying on other teams.',
+        'A self-service application that enables an individual to generate data for a request independently, removing the need to be dependent on a member from another team for this insight.',
       productMedia: { component: 'SelfServiceAnimation' , caption: 'Representation of the product\'s core features'},
 
       context:
@@ -58,7 +58,7 @@ export const PROJECTS = [
       problemMedia: '',
 
       designQuestion:
-        'How might we design an application that handles complex backend processes behind the scenes while delivering a simple, intuitive experience to users?',
+        'How might we design an application that hides backend complexity and delivers a simple, linear A-to-B user experience?',
       designQuestionMedia: '',
       designGoals: ['Reduce time-to-insight for the customer-facing team', 'Eliminate manual handoffs between teams', 'Build something non-technical users could operate independently'],
 
@@ -127,7 +127,7 @@ export const PROJECTS = [
         'Reduces cross-team dependency, accelerates decision-making, and empowers users to access actionable insights faster and more confidently.',
 
       impactHeadline: [
-        { stat: '2 days → < 10 seconds', context: 'turnaround time, from manual request to instant self-service' },
+        { stat: '2 days → less than a minute', context: 'turnaround time for a request was reduced from 2 days to less than a minute' },
         { stat: '100% adoption', context: 'entire customer-facing team onboarded and utilized the tool.' },
       ],
       impactMedia: '',
@@ -142,7 +142,7 @@ export const PROJECTS = [
       designSystemMap: null,
       processSteps: [
         { step: 'Personas', notes: 'Mapped the two teams involved to understand their goals, blockers, and where their workflows created friction for each other.', media: { component: 'UserPersonas' } },
-        { step: 'Flow Mapping', notes: 'Mapped end-to-end workflows for both the customer-facing team and supporting team and the underlying backend pipelines.', media: { component: 'FlowDiagram' } },
+        { step: 'Flow Mapping', notes: 'Mapped end-to-end workflows across customer-facing team, supporting team, and backend pipelines to define the new user flow.', media: { component: 'FlowDiagram' } },
         { step: 'Wireframes', notes: 'Wireframed to illustrate the functionality and linear experience — each screen reflects one step in the user journey through the tool.', media: { src: '/self_wireframe.png', caption: 'Screens of tool' } },
         { step: 'Develop', notes: 'Built early prototypes to test feasibility alongside the design. Code and design evolved together.' },
         {
@@ -328,7 +328,7 @@ export const PROJECTS = [
 
   {
     id: 'apoe-associated-gene-expression-explorer',
-    title: 'Alzheimer\'s: Gene Expression Explorer',
+    title: 'Visualization Platform for Alzheimer\’s Disease Research',
     tagline: '',
     categories: ['exploration'],
     coverColor: '#E4E8DD',
@@ -858,7 +858,7 @@ export const PROJECTS = [
 
   {
     id: 'ai-generated-short-form-visual-companion-for-scientific-posters',
-    title: 'AI-Generated Short-Form Visual Companion for Scientific Posters',
+    title: 'AI-Powered Short-Form Companion for Scientific Posters',
     tagline: 'A design concept for making research posters legible to a time-constrained audience.',
     categories: ['learning'],
     coverImage: '../../public/poster.png',

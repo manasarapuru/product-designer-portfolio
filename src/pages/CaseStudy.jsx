@@ -253,7 +253,6 @@ export default function CaseStudy() {
                 <h1 className="case-study__title serif">{project.title}</h1>
                 <p className="case-study__tagline">{project.tagline}</p>
 
-                {/* Impact headlines — array rendered side-by-side */}
                 {cs.impactHeadline && (
                   <div className="case-study__impact-hls">
                     {(Array.isArray(cs.impactHeadline) ? cs.impactHeadline : [cs.impactHeadline]).map((hl, i) => (

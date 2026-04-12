@@ -64,12 +64,9 @@ function FeaturedWork({ navigate }) {
       </div>
 
       <div className="featured__grid">
-        {projects.map((project, i) => {
+        {projects.map((project) => {
           const color = CATEGORY_COLOR[project.categories?.[0]] ?? '#4ecdc4';
           const cs    = project.caseStudy;
-          const headlines = Array.isArray(cs.impactHeadline)
-            ? cs.impactHeadline
-            : cs.impactHeadline ? [cs.impactHeadline] : [];
 
           return (
             <button
@@ -81,33 +78,25 @@ function FeaturedWork({ navigate }) {
             >
               <div className="fw-card__wash" aria-hidden="true" />
 
-              <div className="fw-card__top">
-                <span className="fw-card__index">0{i + 1}</span>
-                <span className="fw-card__company">{project.company} · {project.year}</span>
-              </div>
-              {(project.maturity || project.evidence) && (
-                <FwBadge maturity={project.maturity} evidence={project.evidence} />
-              )}
+              <div className="fw-card__body">
+                <div className="fw-card__meta">
+                  <span className="fw-card__company">{project.company}</span>
+                  {project.maturity && (
+                    <FwBadge maturity={project.maturity} />
+                  )}
+                </div>
 
-              <h2 className="fw-card__title serif">{project.title}</h2>
-              <p className="fw-card__tagline">{project.tagline}</p>
+                <h2 className="fw-card__title">{project.title}</h2>
+                <p className="fw-card__tagline">{project.tagline || cs.product}</p>
 
-              {headlines.length > 0 && (
-                <div className="fw-card__stats">
-                  {headlines.map((hl, j) => (
-                    <div key={j} className="fw-card__stat">
-                      <span className="fw-card__stat-num">{hl.stat}</span>
-                    </div>
+                <div className="fw-card__tags">
+                  {project.tools?.slice(0, 4).map(t => (
+                    <span key={t} className="fw-card__tag">{t}</span>
                   ))}
                 </div>
-              )}
+              </div>
 
               <div className="fw-card__footer">
-                <div className="fw-card__tools">
-                  {project.tools?.slice(0, 3).map(t => (
-                    <span key={t} className="fw-card__tool">{t}</span>
-                  ))}
-                </div>
                 <span className="fw-card__cta">
                   Read case study
                   <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -129,32 +118,13 @@ const FW_MATURITY_META = {
   'Concept Exploration': { dotClass: 'fw-dot--teal',  tip: 'Idea turned into a design concept' },
 };
 
-const FW_EVIDENCE_META = {
-  'Validated Impact': 'Used by real teams with measurable outcomes',
-  'Observed Impact':  'Known to be in use, but no hard metrics captured',
-  'Tested Concept':   'Concept validated through user feedback',
-  'Untested Concept': 'Prototype with no feedback yet',
-};
 
-function FwBadge({ maturity, evidence }) {
+function FwBadge({ maturity }) {
   const m = FW_MATURITY_META[maturity] ?? { dotClass: 'fw-dot--slate', tip: '' };
   return (
     <span className="fw-badge">
       <span className={`fw-badge__dot ${m.dotClass}`} />
       <span className="fw-badge__maturity">{maturity}</span>
-      {evidence && (
-        <>
-          <span className="fw-badge__sep">·</span>
-          <span className="fw-badge__evidence">{evidence}</span>
-        </>
-      )}
-      <span className="fw-badge__info" aria-hidden="true">
-        ?
-        <span className="fw-badge__tooltip">
-          <strong>{maturity}</strong><br />{m.tip}
-          {evidence && <><br /><br /><strong>{evidence}</strong><br />{FW_EVIDENCE_META[evidence]}</>}
-        </span>
-      </span>
     </span>
   );
 }

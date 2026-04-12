@@ -63,10 +63,10 @@ function WhoIAm() {
         <div>
           <span className="whoiam__label"></span>
           <p className="whoiam__body">
-            Bioinformatics combines computational methods with biology to analyze complex data. Many of its tools were built when <strong>technical capability mattered more than usability</strong>, resulting in powerful but often difficult-to-use interfaces. This creates steep learning curves, requiring scientists to spend more time learning how to use tools rather than focusing on the insights they produce.
+            In the field of bioinformatics, computational methods are used to analyze biological data. However, many tools in this field prioritize <strong>technical functionality</strong> over <strong>usability</strong> due to the computational intensity of the work, resulting in powerful but difficult-to-use interfaces
           </p>
           <p className="whoiam__body">
-            Having worked as <strong>both a developer and a user</strong> of these systems in the field, I experienced this friction firsthand and it became clear that <strong>usability isn't optional</strong>. When tools are hard to use, good science gets slowed down or missed entirely. That experience drove me to realize the impact of thoughtful interface design .
+          Having worked as both a developer and a user of such tools, I saw firsthand that usability is critical. When tools are difficult to use, scientific progress slows and insights can be lost. This experience shaped my focus on thoughtful interface design.
           </p>
           <p className="whoiam__body">
             While my primary skills are rooted in bioinformatics analysis and coding, I naturally gravitated toward product designer–like roles in the past few years. Through those projects I worked on bridging the gap between technical systems and the people using them. That <strong>end-to-end perspective</strong> shapes how I think about every design decision.
@@ -102,7 +102,7 @@ function WhoIAm() {
             <circle cx="252" cy="104" r="16" fill="#d4f5f3" stroke="#4ecdc4" strokeWidth="1.5"/>
             <text x="252" y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="#4ecdc4">2</text>
             <circle cx="272" cy="193" r="16" fill="#F0EBE0" stroke="#8A857E" strokeWidth="1.5"/>
-            <text x="272" y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3A3530">3</text>
+            <text x="272" y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="currentColor">3</text>
             <circle cx="215" cy="265" r="16" fill="#fffce0" stroke="#c8a800" strokeWidth="1.5"/>
             <text x="215" y="270" textAnchor="middle" fontSize="10" fontWeight="700" fill="#c8a800">4</text>
             <circle cx="125" cy="265" r="16" fill="#fff0f0" stroke="#ff6b6b" strokeWidth="1.5"/>
@@ -110,17 +110,17 @@ function WhoIAm() {
             <circle cx="68"  cy="193" r="16" fill="#d4f5f3" stroke="#4ecdc4" strokeWidth="1.5"/>
             <text x="68"  y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="#4ecdc4">6</text>
             <circle cx="88"  cy="104" r="16" fill="#F0EBE0" stroke="#8A857E" strokeWidth="1.5"/>
-            <text x="88"  y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="#3A3530">7</text>
-            <text x="170" y="36"  textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">User Flows</text>
-            <text x="272" y="83"  textAnchor="start"  fontSize="7.5" fontWeight="700" fill="#1A1512">Wireframes</text>
-            <text x="272" y="162" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">Vibe Coding</text>
-            <text x="215" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">High-Fidelity UI</text>
-            <text x="125" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#1A1512">Prototype</text>
-            <text x="48"  y="190" textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Handoff &amp; Ship</text>
-            <text x="68"  y="83"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Feedback &amp;</text>
-            <text x="68"  y="93"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="#1A1512">Iteration</text>
-            <text x="170" y="166" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="#3A3530">DESIGN</text>
-            <text x="170" y="178" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="#3A3530">LOOP</text>
+            <text x="88"  y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="currentColor">7</text>
+            <text x="170" y="36"  textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">User Flows</text>
+            <text x="272" y="83"  textAnchor="start"  fontSize="7.5" fontWeight="700" fill="currentColor">Wireframes</text>
+            <text x="272" y="162" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Vibe Coding</text>
+            <text x="215" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">High-Fidelity UI</text>
+            <text x="125" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Prototype</text>
+            <text x="48"  y="190" textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Handoff &amp; Ship</text>
+            <text x="68"  y="83"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Feedback &amp;</text>
+            <text x="68"  y="93"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Iteration</text>
+            <text x="170" y="166" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="currentColor">DESIGN</text>
+            <text x="170" y="178" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="currentColor">LOOP</text>
           </svg>
         </div>
       </div>
