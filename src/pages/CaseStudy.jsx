@@ -846,7 +846,7 @@ function MediaBlock({ media, bleed }) {
         return (
           <figure key={i} className={figClass} >
             {item.src
-              ? <img src={item.src} alt={item.caption || ''} className="cs-media__img" />
+              ? <img src={`${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`} alt={item.caption || ''} className="cs-media__img" />
               : <div className="cs-media__box" aria-hidden="true" />
             }
             {item.caption && <figcaption className="cs-media__caption">{item.caption}</figcaption>}
