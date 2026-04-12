@@ -59,7 +59,7 @@ function WhoIAm() {
     <div className="whoiam">
 
       <div className="whoiam__intro-row">
-        <img src="/avatar.png" alt="Manasa Rapuru" className="whoiam__photo" />
+        <img src={`${import.meta.env.BASE_URL}avatar.png`} alt="Manasa Rapuru" className="whoiam__photo" />
         <div>
           <span className="whoiam__label"></span>
           <p className="whoiam__body">
