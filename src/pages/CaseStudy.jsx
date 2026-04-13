@@ -417,22 +417,24 @@ export default function CaseStudy() {
           )}
         </Section>
 
-        <Section label="Impact" takeaway={cs.impactTakeaway}>
-          <NarrativeWithMedia text={cs.impact} media={cs.impactMedia} />
-          {cs.goalsMet?.length > 0 && (
-            <div className="cs-goals-met">
-              <span className="cs-goals-met__heading">Goals met</span>
-              <ul className="cs-goals-met__list">
-                {cs.goalsMet.map((g, i) => (
-                  <li key={i} className="cs-goals-met__item">
-                    <span className="cs-goals-met__tick">✓</span>
-                    {g}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </Section>
+        {(cs.impact || cs.goalsMet?.length > 0) && (
+          <Section label="Impact" takeaway={cs.impactTakeaway}>
+            <NarrativeWithMedia text={cs.impact} media={cs.impactMedia} />
+            {cs.goalsMet?.length > 0 && (
+              <div className="cs-goals-met">
+                <span className="cs-goals-met__heading">Goals met</span>
+                <ul className="cs-goals-met__list">
+                  {cs.goalsMet.map((g, i) => (
+                    <li key={i} className="cs-goals-met__item">
+                      <span className="cs-goals-met__tick">✓</span>
+                      {g}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </Section>
+        )}
 
         {cs.improvements && (
           <Section label="Room for Improvement">
@@ -778,7 +780,7 @@ function MediaBlock({ media, bleed }) {
   const raw = Array.isArray(media) ? media : [media];
   const items = raw
     .map(item => typeof item === 'string' ? { caption: item } : item)
-    .filter(item => item && (item.src || item.video || item.caption || item.component || item.type === 'feedback'));
+    .filter(item => item && (item.src || item.video || item.caption || item.component || item.type === 'feedback' || item.type === 'ideation-concepts' || item.type === 'pros-cons' || item.type === 'decision'));
 
   if (!items.length) return null;
 
@@ -824,6 +826,63 @@ function MediaBlock({ media, bleed }) {
               />
               {item.caption && <figcaption className="cs-media__caption">{item.caption}</figcaption>}
             </figure>
+          );
+        }
+        if (item.type === 'ideation-concepts') {
+          return (
+            <div key={i} className="cs-ideation">
+              {item.concepts.map((c, j) => (
+                <div key={j} className="cs-ideation__card">
+                  <IdeationIcon type={c.icon} />
+                  <span className="cs-ideation__num">0{j + 1}</span>
+                  <strong className="cs-ideation__title">{c.title}</strong>
+                  <p className="cs-ideation__desc">{c.description}</p>
+                </div>
+              ))}
+            </div>
+          );
+        }
+        if (item.type === 'decision') {
+          return (
+            <div key={i} className="cs-decision">
+              <div className="cs-decision__header">
+                <span className="cs-decision__label">Decision</span>
+                <strong className="cs-decision__chosen">{item.chosen}</strong>
+              </div>
+              <ul className="cs-decision__reasons">
+                {item.reasons.map((r, k) => (
+                  <li key={k} className="cs-decision__reason">
+                    <span className="cs-decision__check">✓</span>{r}
+                  </li>
+                ))}
+              </ul>
+              {item.caveat && (
+                <p className="cs-decision__caveat">{item.caveat}</p>
+              )}
+            </div>
+          );
+        }
+        if (item.type === 'pros-cons') {
+          return (
+            <div key={i} className="cs-pros-cons">
+              {item.items.map((c, j) => (
+                <div key={j} className="cs-pros-cons__col">
+                  <strong className="cs-pros-cons__title">{c.title}</strong>
+                  <div className="cs-pros-cons__section">
+                    <span className="cs-pros-cons__label cs-pros-cons__label--pro">Pros</span>
+                    <ul className="cs-pros-cons__list">
+                      {c.pros.map((p, k) => <li key={k} className="cs-pros-cons__item cs-pros-cons__item--pro">✓ {p}</li>)}
+                    </ul>
+                  </div>
+                  <div className="cs-pros-cons__section">
+                    <span className="cs-pros-cons__label cs-pros-cons__label--con">Cons</span>
+                    <ul className="cs-pros-cons__list">
+                      {c.cons.map((c2, k) => <li key={k} className="cs-pros-cons__item cs-pros-cons__item--con">✕ {c2}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
           );
         }
         if (item.video) {
@@ -978,6 +1037,17 @@ function HeroShapes({ categoryId }) {
 }
 
 /* ── Link icon ──────────────────────────────────────────── */
+function IdeationIcon({ type }) {
+  if (!type) return null;
+  return (
+    <img
+      src={`${import.meta.env.BASE_URL}${type}.png`}
+      alt={type}
+      className="cs-ideation__icon"
+    />
+  );
+}
+
 function LinkIcon({ type }) {
   if (type === 'figma') return (
     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

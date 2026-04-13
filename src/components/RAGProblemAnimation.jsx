@@ -76,7 +76,7 @@ export default function RAGProblemAnimation() {
         </div>
       </div>
 
-      <p className="ragp__caption">Without metadata, structure, or context — data sits unused.</p>
+
     </div>
   );
 }

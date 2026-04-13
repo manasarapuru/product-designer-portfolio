@@ -89,12 +89,14 @@ export default function ProjectGallery() {
 
 function ProjectCard({ project, categoryColor, onClick }) {
   const impacts = project.caseStudy?.impactHeadline?.filter(h => h.stat) ?? [];
+  const isComingSoon = project.comingSoon;
   return (
     <button
-      className="project-card"
-      onClick={onClick}
-      aria-label={`View case study: ${project.title}`}
+      className={`project-card${isComingSoon ? ' project-card--coming-soon' : ''}`}
+      onClick={isComingSoon ? undefined : onClick}
+      aria-label={isComingSoon ? project.title : `View case study: ${project.title}`}
       style={{ '--cat-color': categoryColor }}
+      disabled={isComingSoon}
     >
       <div className="project-card__accent" aria-hidden="true" />
 
@@ -102,19 +104,28 @@ function ProjectCard({ project, categoryColor, onClick }) {
         {/* Top: meta row */}
         <div className="project-card__meta-row">
           <span className="project-card__year">{project.year}</span>
+          {project.company && (
+            <>
+              <span className="project-card__sep" aria-hidden="true">·</span>
+              <span className="project-card__company">{project.company}</span>
+            </>
+          )}
           {project.maturity && (
             <>
               <span className="project-card__sep" aria-hidden="true">·</span>
               <span className="project-card__maturity">{project.maturity}</span>
             </>
           )}
-          <span className="project-card__cta">
-            View case study <ArrowRight />
-          </span>
+          {!isComingSoon && (
+            <span className="project-card__cta">
+              View case study <ArrowRight />
+            </span>
+          )}
         </div>
 
-        {/* Title + role */}
+        {/* Title + tagline + role */}
         <h2 className="project-card__title serif">{project.title}</h2>
+        {project.tagline && <p className="project-card__tagline">{project.tagline}</p>}
         <p className="project-card__role">{project.role}</p>
 
         {/* Impact zone */}

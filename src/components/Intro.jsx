@@ -68,11 +68,11 @@ export default function Intro({ onDone }) {
           <TypedBubble n={1} show={phase === 2} onNext={advance}
             text="Hi, I'm Manasa 👋" />
           <TypedBubble n={2} show={phase === 3} onNext={advance}
-            text="Product designer & developer." />
+            text="Thank you for taking the time to view my product design work 🙂" />
           <TypedBubble n={3} show={phase === 4} onNext={advance}
-            text="Thank you for stopping by! Feel free to reach out if my work resonates with you :)" />
+            text="Feel free to reach out or connect with me on LinkedIn! " />
           <TypedBubble n={4} show={phase === 5} onNext={advance}
-            text="Let's step into my work ✨" />
+            text="Without further ado, let's step right in ✨" />
           <SmoothGirl turned={turned} walking={walking} />
         </div>
 

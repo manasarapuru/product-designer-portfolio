@@ -185,6 +185,22 @@ export const PROJECTS = [
     },
   },
 
+  {
+    id: 'context-aware-database-exploration-chatbot',
+    title: 'Context-Aware Database Exploration Chatbot',
+    tagline: 'A context-aware conversational chatbot for exploring and understanding contents of a database.',
+    categories: ['exploration'],
+    coverColor: '#DDE4E8',
+    maturity: 'Coming Soon',
+    evidence: '',
+    year: '2025',
+    role: '',
+    company: 'Thermo Fisher Scientific',
+    tools: [],
+    comingSoon: true,
+    caseStudy: {},
+  },
+
   /* {
     id: 'project-beta',
     title: 'RAG Metadata Tool',
@@ -352,7 +368,7 @@ export const PROJECTS = [
       problemMedia: { component: 'RAGProblemAnimation' },
 
       designQuestion:
-        'How might we create a structured, interactive platform that helps researchers efficiently access, navigate, and interpret complex datasets?',
+        'How might we help researchers navigate complex datasets while clearly revealing underlying patterns and trends?',
       designGoals: [],
       designGoalsMedia: { component: 'APOEDesignContext' },
       failureMedia: '',
@@ -396,12 +412,12 @@ export const PROJECTS = [
 
       impactHeadline: [
         { stat: 'Fragmented spreadsheets → unified explorer', context: 'Lab data that lived across disconnected files became queryable in one place for the first time' },
-        { stat: 'Independent exploration', context: 'Lab members without programming backgrounds could explore gene expression data without researcher support' },
+        { stat: 'Independent exploration', context: 'Lab members without programming backgrounds could explore gene expression data without support' },
       ],
       impact:
-        'Before this platform, understanding the dataset required going directly to the researchers who built it. Afterwards, lab members could explore gene expression patterns, filter by condition, and surface comparisons independently. The data did not change. The accessibility of it did.',
+        'Before this platform, there was no way to visualize the datasets. Afterward, lab members could explore gene expression patterns, filter by condition, and surface comparisons on their own. The data itself remained unchanged, but its accessibility and interpretability were significantly improved.',
       impactMedia: '',
-      improvements: 'Future iterations could have included designing for features that allow for more indepth comparative visualizations.',
+      improvements: '',
 
       designSystem: '',
       designSystemMedia: '',
@@ -445,21 +461,22 @@ export const PROJECTS = [
             interactionPatterns: [
               'User-driven data exploration with no forced paths',
               'Quick parameter switching with instant visual updates',
+              'Data export also available'
             ],
             designStrategyPoints: [
               'Support flexible exploration because researchers need freedom to follow the data',
               'Guided entry points reduce initial overwhelm',
-              'Minimize visual noise so data dominates, not interface chrome',
+              'Minimize visual noise so data dominates, not interface itself',
             ],
             outcome: 'Created a system that supports flexible yet intuitive data exploration.',
           },
           media: { component: 'HiFiBioinformatics' },
         },
-        { step: 'Prototype', notes: 'Walked through the interface with professor to validate that data exploration felt intuitive and that the review workflow mapped to how they actually made decisions.' },
-        { step: 'Handoff & Ship', notes: 'Group deployed and delievered the application to professor at end of project.' },
+        { step: 'Prototype', notes: 'Walked through the interface with professor to validate that data exploration felt intuitive and reviewed that the workflow mapped to how they actually made decisions.' },
+        { step: 'Handoff & Ship', notes: 'Group deployed and delievered the application to professor at end of semester.' },
         {
           step: 'Feedback',
-          notes: 'There was no formal feedback cycle. The project was scoped around requirements set by the professor — the platform was built to meet those requirements and delivered to the lab. The reception reflected that what was asked for had been delivered.',
+          notes: 'There was no formal feedback cycle. The project was scoped around requirements set by the professor. The platform was built to meet those requirements and delivered to the lab.',
           media: { component: 'APOEFeedback' },
         },
       ],
@@ -628,6 +645,22 @@ export const PROJECTS = [
     },
 
   },
+  {
+    id: 'adaptive-ml-model-guidance-platform',
+    title: 'Adaptive Machine Learning Model Guidance Platform',
+    tagline: 'A goal-first adaptive companion that recommends the right scikit-learn ML models for your use case and walks you through implementation.',
+    categories: ['learning'],
+    coverColor: '#E8DDE8',
+    maturity: 'Coming Soon',
+    evidence: '',
+    year: '2026',
+    company: 'Independent',
+    role: '',
+    tools: [],
+    comingSoon: true,
+    caseStudy: {},
+  },
+
 /*   {
     id: 'project-zeta',
     title: 'Scikit-Learn Learning Lab',
@@ -859,7 +892,7 @@ export const PROJECTS = [
   {
     id: 'ai-generated-short-form-visual-companion-for-scientific-posters',
     title: 'AI-Powered Short-Form Companion for Scientific Posters',
-    tagline: 'A design concept for making research posters legible to a time-constrained audience.',
+    tagline: 'Can AI be leveraged to make scientific posters easier to understand and navigate in fast-paced conference settings?',
     categories: ['learning'],
     coverImage: '../../public/poster.png',
     coverColor: '#E8DDE8',
@@ -867,7 +900,7 @@ export const PROJECTS = [
     evidence: 'Untested Concept',
     year: '2026',
     role: 'Product Designer',
-    roleSummary: 'Explored the problem end-to-end — framed the hypothesis, designed both surfaces, built a working prototype, and published the thinking publicly as a LinkedIn article to invite discussion.',
+    roleSummary: 'Explored the problem end to end by framing the hypothesis and designing a two-sided product suite for creators and users, built a working prototype, and published the thinking as a LinkedIn article to invite feedback and discussion.',
     company: 'Independent',
     sector: 'Research Communication',
     tools: ['AI Model','Figma', 'React.js'],
@@ -876,14 +909,14 @@ export const PROJECTS = [
       ],
     caseStudy: {
       product:
-        'A self-initiated design concept exploring whether AI could close the comprehension gap at academic poster sessions. The question driving it: what if a researcher could give every attendee a plain-language summary of their work, accessible in under five seconds, without being present to explain it? This is an exploration of that idea — not a shipped product, but a worked-through design hypothesis.',
-      productMedia: { component: 'PosterProductAnimation' },
+        'A two-sided product suite prototype that enables creators to generate structured, plain-language summaries of scientific posters and allows users to quickly scan and understand research through a streamlined mobile interface.',
+      productMedia: { component: '' },
       context:
-        'This project started from personal experience. Having stood in front of posters as both a presenter and an audience member, and hearing the same frustration from peers, the problem felt worth exploring. Presenters spend weeks on research that attendees have maybe two minutes to absorb. The poster format has not changed, but the problem of comprehension under time pressure is real and consistent across conferences.',
-      contextMedia: { component: 'PosterContextAnimation' },
+        'Scientific posters condense weeks, months, or even years of research into something visible, portable, and discussable, reflecting the structured way scientific knowledge is communicated. However, poster sessions at conferences can often feel cognitively overwhelming. With limited time, overlapping conversations, and dozens of dense posters competing for attention, meaningful engagement becomes difficult. Attendees frequently look for an anchor point such as a familiar term or recognizable diagram to build understanding from. Without that, more time is spent decoding terminology than engaging with the work itself.',
+      contextMedia: { component: '' },
 
       problemState:
-        'Scientific posters are designed for depth, not speed. Attendees navigating a session have limited time per poster and no easy way to quickly assess whether a piece of research is relevant to them — leading to surface-level engagement or posters being skipped entirely. Presenters have no lightweight way to extend the reach of their work beyond the session itself.',
+        'Scientific posters are designed for depth, not speed. Attendees navigating a session have limited time per poster and no easy way to quickly assess whether a piece of research is relevant to them — leading to surface-level engagement or posters being skipped entirely. Presenters lack a lightweight way to communicate their work during the poster session that balances depth and brevity.',
       
       problemMedia: '',
 
@@ -908,20 +941,74 @@ export const PROJECTS = [
         ' And enabling attendees to quickly access and understand the key information on scientific posters through the AI-generated cognitive assistant, leading to increased engagement and more meaningful knowledge exchange during poster sessions.',
       executeMedia: ' Prototype: a user scanning a QR code on a scientific poster and being directed to the AI-generated cognitive assistant\'s mobile-friendly explanation page, where they can quickly understand the key information about the research being presented',
 
-      impactHeadline: [
-        { stat: 'Concept, not yet validated', context: 'Built to provoke a question, not to claim an answer' },
-        { stat: 'Two open hypotheses', context: 'Does it improve comprehension? Is it necessary, or just convenient?' },
-      ],
-      impact:
-        'This is a design concept grounded in observed behavior, not a shipped product. The hypothesis is that a plain-language AI summary, accessed in under five seconds via QR code, would meaningfully improve how quickly an attendee can assess whether a poster is worth deeper engagement. What I do not yet know is whether users would experience this as genuinely useful or as a layer of friction replacing the natural act of talking to the presenter. That tension is the most interesting thing to test.',
+      impactHeadline: [],
+      impact: '',
       impactMedia: '',
-      improvements: 'The author submission flow assumes researchers will engage with it ahead of the conference — that assumption needs pressure-testing against the reality of last-minute preparation. The AI summary quality also depends heavily on what the author submits; a structured input guide or smart prompts would raise the floor on output quality without adding friction.',
+      improvements: 'This is a design concept grounded in observed behavior, not a shipped product. The hypothesis is that a plain-language AI summary, accessed in under five seconds via QR code, would meaningfully improve how quickly an attendee can assess whether a poster is worth deeper engagement. What I do not yet know is whether users would experience this as genuinely useful or as a layer of friction. Hence next steps is to validate the core assumptions through user testing with a working prototype, both the author submission flow and the attendee summary experience.',
 
       designSystem: '',
       designSystemMedia: '',
       designSystemMap: null,
       processSteps: [
         { step: 'Personas', notes: 'Identified two distinct users with different contexts, goals, and time constraints — the researcher presenting their work and the attendee trying to quickly assess relevance.', media: { component: 'PosterPersonas' } },
+        {
+          step: 'Ideation',
+          notes: 'Before committing to any format, three distinct concepts were explored for what the companion artifact could be. Each addressed the core problem differently — bridging the gap between dense academic posters and attendees with limited time and no domain background.',
+          media: [
+            {
+              type: 'ideation-concepts',
+              concepts: [
+                {
+                  title: 'Take-Home Plain Language Handout',
+                  description: 'A printed summary of each poster section rewritten in plain English, given to attendees to take away from the session.',
+                  icon: 'summary',
+                },
+                {
+                  title: 'Laminated Viewing Aid',
+                  description: 'A reusable laminated card placed at the poster with a glossary of key terms, available during viewing and returned afterwards.',
+                  icon: 'term',
+                },
+                {
+                  title: 'AI-Generated Digital Artifact via QR Code',
+                  description: 'An AI-generated plain-language companion accessed by scanning a QR code on the poster — no app required, works on any phone.',
+                  icon: 'qr',
+                },
+              ],
+            },
+            {
+              type: 'pros-cons',
+              items: [
+                {
+                  title: 'Take-Home Handout',
+                  pros: ['Easy to produce', 'No technology required', 'Portable and referenceable later'],
+                  cons: ['Printing cost', 'Static', 'Adds to paper waste', 'May not add much value as it may seem like a reiteration of the poster'],
+                },
+                {
+                  title: 'Laminated Viewing Aid',
+                  pros: ['Reusable and sustainable', 'Available at point of need', 'Low cost per use'],
+                  cons: ['Only covers terminology, not the research itself', 'Can go missing or get damaged', 'Requires physical management at each poster', 'No personalization to specific poster content'],
+                },
+                {
+                  title: 'QR-Linked Digital Artifact',
+                  pros: ['Instantly accessible on any device', 'Can be fully customized', 'No printing or physical management', 'Option to link to full paper, figures, and further reading', 'Portable and referenceable later', 'Gives audience freedom to explore on their own time'],
+                  cons: ['Requires a phone', 'Presenters have to put in some extra work to create the QR code'],
+                },
+              ],
+            },
+            {
+              type: 'decision',
+              chosen: 'Option 3 — AI-Generated Digital Artifact via QR Code',
+              reasons: [
+                'No printing costs, logistics, or physical materials to manage at scale',
+                'Fully personalized to each poster — not a generic glossary or summary',
+                'Accessible on any device without requiring an app download',
+                'Attendees can revisit it after the session, extending engagement beyond the room',
+                'AI generation makes it scalable — one researcher can produce it without a design team',
+              ],
+              caveat: 'This option places extra work on the presenter to set up their QR code before the conference. That tradeoff is only acceptable if the input experience is fast and low-friction. The goal was that a researcher could complete the setup in under five minutes, without needing any technical knowledge or design skill.',
+            },
+          ],
+        },
         { step: 'User Flows', notes: 'Mapped two separate journeys. The author flow: from deciding to add a QR code through to submitting content and having the artifact generated. The attendee flow: from spotting the QR code at a poster session through to reading the summary and deciding whether to engage deeper. Both flows needed to work independently but produce a connected result.', media: { component: 'PosterFlowDiagram' } },
         { step: 'Wireframes', notes: 'Designed both surfaces separately. The author interface needed to feel lightweight enough that a researcher would use it in the days before a conference, not just ignore it. The artifact needed to be readable in under two minutes on a phone in a noisy room.', media: { component: 'PosterWireframes' } },
         { step: 'Vibe Coding', notes: 'Prototyped the AI summary generation pipeline in React.js to test how well AI-generated plain language matched attendee comprehension needs in early concept tests.' },
@@ -932,15 +1019,14 @@ export const PROJECTS = [
             systemContext: '',
             designStrategy: '',
             foundations: [
-              'High-contrast palette for bright/outdoor conference lighting',
-              'Mobile-optimised with large tap targets and short scrollable sections',
-              'Content-first: UI recedes entirely so the summary leads',
+              'High-contrast palette',
+              'Mobile-optimized with large tap targets and short scrollable sections',
+              
             ],
             components: [
-              'Plain-language summary card — AI-structured, human-readable',
+              'Plain-language summary, AI-generated, human-readable, content from user input',
               'Inline term definitions — no external glossary needed',
               'Key figures highlighted with annotation overlays',
-              'Full paper CTA — clear path to depth for engaged readers',
             ],
             interactionPatterns: [
               'Linear read: one section at a time with no branching',
@@ -955,9 +1041,8 @@ export const PROJECTS = [
           },
           media: null,
         },
-        { step: 'Pressure Testing', notes: 'Built a working prototype to make the concept tangible enough to test the core interaction — QR to summary in under five seconds. The prototype was the thinking tool, not a validation instrument.' },
         { step: 'Handoff & Ship', notes: 'This project is not shipped. It exists as a design concept and working prototype, published as a LinkedIn article to invite discussion and gather reactions from the research and design community.' },
-        { step: 'Feedback & Iteration', notes: 'No formal testing has been conducted. The two questions I would take into a real validation study: first, does a plain-language AI summary genuinely help someone understand the research faster, or does it just feel like it does? Second, does it replace the conversation with the presenter, which is often the most valuable part of a poster session, or does it create a better starting point for that conversation? The answer to the second question would determine whether this is a useful tool or an elegant solution to the wrong problem.', link: { label: 'View feedback form', url: 'https://forms.gle/iAWpz6ugb5Ekmf6T8' } },
+        { step: 'Feedback & Iteration', notes: 'No formal testing has been conducted yet. The two questions I would take into a real validation study: first, does a plain-language AI summary genuinely help someone understand the research faster, or does it just feel like it does? Second, does it create a better starting point for that conversation? The answers to these questions would determine whether this is a useful tool or an elegant solution to the wrong problem.', link: { label: 'View feedback form', url: 'https://forms.gle/iAWpz6ugb5Ekmf6T8' } },
       ],
     },
   },
