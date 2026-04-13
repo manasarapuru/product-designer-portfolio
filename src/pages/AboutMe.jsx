@@ -18,7 +18,7 @@ export default function AboutMe() {
             <h1 className="resume__name serif">Manasa Rapuru</h1>
             <p className="resume__title">Product Designer · Developer · Bioinformatician</p>
           </div>
-          <a href="https://drive.google.com/file/d/17uHWBSn9SP_JcbUcawUrgrM0T332Wn3-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume__download" aria-label="Download resume PDF">
+          <a href="https://drive.google.com/file/d/1bqtE-PNut068E4MsQ8Ad770KJExCPFVX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume__download" aria-label="Download resume PDF">
             <DownloadIcon />
             Download Resume
           </a>
@@ -83,7 +83,7 @@ function WhoIAm() {
         <span className="whoiam__label">How I Work</span>
         <p className="whoiam__lead serif">A loop, not a line.</p>
         <div className="whoiam__process-svg-wrap">
-          <svg className="whoiam__process-svg" viewBox="0 0 340 340" aria-label="Design process loop">
+          <svg className="whoiam__process-svg" viewBox="-10 0 360 325" aria-label="Design process loop">
             <defs>
               <marker id="pa" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
                 <path d="M0.5,1 L5,3 L0.5,5" fill="none" stroke="#C8C3B8" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
@@ -92,9 +92,8 @@ function WhoIAm() {
             <circle cx="170" cy="170" r="105" fill="none" stroke="#E8E4DC" strokeWidth="1.2" strokeDasharray="5 4"/>
             <line x1="184" y1="72"  x2="238" y2="97"  stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
             <line x1="256" y1="120" x2="268" y2="177" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
-            <line x1="262" y1="206" x2="225" y2="252" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
-            <line x1="199" y1="264" x2="141" y2="264" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
-            <line x1="115" y1="252" x2="78"  y2="206" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
+            <line x1="260" y1="203" x2="182" y2="265" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
+            <line x1="158" y1="265" x2="81"  y2="203" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
             <line x1="72"  y1="177" x2="84"  y2="120" stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
             <line x1="102" y1="97"  x2="156" y2="72"  stroke="#C8C3B8" strokeWidth="1.2" markerEnd="url(#pa)"/>
             <circle cx="170" cy="65"  r="16" fill="#fff0f0" stroke="#ff6b6b" strokeWidth="1.5"/>
@@ -103,22 +102,25 @@ function WhoIAm() {
             <text x="252" y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="#4ecdc4">2</text>
             <circle cx="272" cy="193" r="16" fill="#F0EBE0" stroke="#8A857E" strokeWidth="1.5"/>
             <text x="272" y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="currentColor">3</text>
-            <circle cx="215" cy="265" r="16" fill="#fffce0" stroke="#c8a800" strokeWidth="1.5"/>
-            <text x="215" y="270" textAnchor="middle" fontSize="10" fontWeight="700" fill="#c8a800">4</text>
-            <circle cx="125" cy="265" r="16" fill="#fff0f0" stroke="#ff6b6b" strokeWidth="1.5"/>
-            <text x="125" y="270" textAnchor="middle" fontSize="10" fontWeight="700" fill="#ff6b6b">5</text>
+            <circle cx="170" cy="275" r="16" fill="#fffce0" stroke="#c8a800" strokeWidth="1.5"/>
+            <text x="170" y="280" textAnchor="middle" fontSize="10" fontWeight="700" fill="#c8a800">4</text>
             <circle cx="68"  cy="193" r="16" fill="#d4f5f3" stroke="#4ecdc4" strokeWidth="1.5"/>
-            <text x="68"  y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="#4ecdc4">6</text>
+            <text x="68"  y="198" textAnchor="middle" fontSize="10" fontWeight="700" fill="#4ecdc4">5</text>
             <circle cx="88"  cy="104" r="16" fill="#F0EBE0" stroke="#8A857E" strokeWidth="1.5"/>
-            <text x="88"  y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="currentColor">7</text>
+            <text x="88"  y="109" textAnchor="middle" fontSize="10" fontWeight="700" fill="currentColor">6</text>
             <text x="170" y="36"  textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">User Flows</text>
+            <text x="170" y="47"  textAnchor="middle" fontSize="6"   fill="#8A857E">Map logic &amp; journeys</text>
             <text x="272" y="83"  textAnchor="start"  fontSize="7.5" fontWeight="700" fill="currentColor">Wireframes</text>
-            <text x="272" y="162" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Vibe Coding</text>
-            <text x="215" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">High-Fidelity UI</text>
-            <text x="125" y="294" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Prototype</text>
-            <text x="48"  y="190" textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Handoff &amp; Ship</text>
+            <text x="272" y="94"  textAnchor="start"  fontSize="6"   fill="#8A857E">Structure the experience</text>
+            <text x="272" y="162" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Development</text>
+            <text x="272" y="173" textAnchor="middle" fontSize="6"   fill="#8A857E">Code, build &amp; prototype</text>
+            <text x="170" y="302" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="currentColor">Prototype</text>
+            <text x="170" y="313" textAnchor="middle" fontSize="6"   fill="#8A857E">Test interactions</text>
+            <text x="58"  y="190" textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Handoff &amp; Ship</text>
+            <text x="58"  y="201" textAnchor="end"    fontSize="6"   fill="#8A857E">Deliver &amp; document</text>
             <text x="68"  y="83"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Feedback &amp;</text>
             <text x="68"  y="93"  textAnchor="end"    fontSize="7.5" fontWeight="700" fill="currentColor">Iteration</text>
+            <text x="68"  y="104" textAnchor="end"    fontSize="6"   fill="#8A857E">Learn &amp; improve</text>
             <text x="170" y="166" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="currentColor">DESIGN</text>
             <text x="170" y="178" textAnchor="middle" fontSize="8" fontWeight="700" letterSpacing="1.5" fill="currentColor">LOOP</text>
           </svg>
@@ -241,7 +243,7 @@ function Education() {
 
 /* ── Skills ─────────────────────────────────────────────── */
 const SKILL_GROUPS = [
-  { label: 'Design',          color: '#ff6b6b', soft: '#fff0f0', skills: ['Figma', 'Prototyping', 'Design Systems', 'User Flows', 'Wireframing', 'High-Fidelity UI', 'UX Research'] },
+  { label: 'Design',          color: '#ff6b6b', soft: '#fff0f0', skills: ['Figma', 'Framer', 'Interviews','Surveys', 'Usability Testing', 'Prototyping', 'Wireframing', 'Interaction Design', 'Ideation', 'User Story Mapping', 'A/B Testing', 'Web Analytics'] },
   { label: 'Development',     color: '#4ecdc4', soft: '#d4f5f3', skills: ['React', 'JavaScript', 'HTML & CSS', 'Python', 'R', 'HPC', 'Git','FastAPI','Flask','Django','Bash'] },
   { label: 'Domain',          color: '#c8a800', soft: '#fffce0', skills: ['Bioinformatics', 'Genomics',  'Transcriptomics', 'Microbiology','Immunology'] },
   // { label: 'Tools & Process', color: '#1a535c', soft: '#d4eced', skills: ['AI-assisted design', 'Notion', 'Linear', 'Handoff & Specs', 'Agile / Scrum'] },
