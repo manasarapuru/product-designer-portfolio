@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <script>
-      // Redirect all 404s back to index with the path as a query param
-      var path = window.location.pathname;
-      window.location.replace('/?p=' + encodeURIComponent(path));
+      var l = window.location;
+      var base = '/product-designer-portfolio';
+      var path = l.pathname.slice(base.length) || '/';
+      l.replace(base + '/?p=' + encodeURIComponent(path + l.search) + (l.hash ? '&h=' + encodeURIComponent(l.hash.slice(1)) : ''));
     </script>
   </head>
   <body></body>
