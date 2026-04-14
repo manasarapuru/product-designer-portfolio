@@ -185,33 +185,19 @@ export const PROJECTS = [
     },
   },
 
-  {
-    id: 'context-aware-database-exploration-chatbot',
-    title: 'Context-Aware Database Exploration Chatbot',
-    tagline: 'A context-aware conversational chatbot for exploring and understanding contents of a database.',
-    categories: ['exploration'],
-    coverColor: '#DDE4E8',
-    maturity: 'Coming Soon',
-    evidence: '',
-    year: '2025',
-    role: '',
-    company: 'Thermo Fisher Scientific',
-    tools: [],
-    comingSoon: true,
-    caseStudy: {},
-  },
 
-  /* {
-    id: 'project-beta',
-    title: 'RAG Metadata Tool',
-    tagline: '',
+
+ {
+    id: 'metadata-generation-rag-chatbot',
+    title: 'AI-Powered RAG Chatbot for Metadata Generation and Dataset Exploration',
+    tagline: 'A context-aware conversational chatbot for exploring and understanding contents of a database.',
     categories: ['exploration'],
     coverColor: '#DDE4E8',
     maturity: 'Prototyped Solution',
     evidence: 'Tested Concept',
     year: '2025',
-    role: 'Sole Product Designer & Developer',
-    roleSummary: 'Led design and built the product — from AI pipeline UX to the conversational interface in React.',
+    role: 'Product Designer & Developer',
+    roleSummary: 'Built the backend architecture and frontend interface for an AI-powered RAG chatbot that generates metadata and enables users to query and understand databases through context-aware conversations tailored to their usecase.',
     company: 'Thermo Fisher Scientific',
     tools: ['AI Model', 'React.js', 'FastAPI', 'RAG'],
     caseStudy: {
@@ -220,21 +206,18 @@ export const PROJECTS = [
       productMedia: { component: 'HiFiRAGChat' },
       context:
         'Raw datasets alone are often difficult for users to interpret or act on. Without proper context, descriptions, or structured organization, the data’s value remains inaccessible.',
-      contextMedia: '',     /*  [
-  { src: '/images/wireframe-1.png', caption: 'Initial wireframes' },
-  { src: '/images/wireframe-2.png', caption: 'Refined layout' },
-], 
+      contextMedia: '',
 
       problemState:
         'Users struggle to make sense of datasets because there is no platform that organizes the information in a way that is understandable and actionable. Lack of metadata, structure, and exploration tools leads to underutilization of the data.',
       problemMedia: '',
 
       designQuestion:
-        'How might we create a platform that organizes datasets with meaningful context, descriptions, and structure, so users can easily understand and act on the information they need?',
+        'How might we build an application with complex backend architecture, with an additional layer of AI verification, while delivering a simple, intuitive frontend experience?',
       failureMedia: '',
 
       opportunity:
-        'There is an opportunity to design a system that not only stores data but presents it in a way that aligns with user needs—making datasets more comprehensible, navigable, and actionable.',
+        'There is an opportunity to design a system that not only stores data but presents it in a way that aligns with user needs, making datasets more comprehensible, navigable, and actionable.',
       opportunityMedia: '',
 
       solutionGoal:
@@ -283,56 +266,52 @@ export const PROJECTS = [
 
       impactHeadline: [
         { stat: 'Data contextualized for actionable insights', context: '' },
-        { stat: 'Accelerates research workflows', context: 'AI-generated metadata replaced the manual annotation workflow' },
+        { stat: 'Accelerates research workflows', context: '' },
       ],
       impact:
         'Improved data comprehension and usability for end users. Reduced time spent manually interpreting or cleaning datasets. Enabled more effective decision-making and downstream workflows.',
       impactMedia: '',
-      improvements: 'The metadata editing experience could be extended with validation feedback — flagging likely errors or inconsistencies in the AI-generated output before the user accepts them. Batch curation across multiple datasets would also reduce the overhead for users managing large collections.',
+      improvements: '',
 
       designSystem: '',
       designSystemMedia: '',
       designSystemMap: null,
       processSteps: [
-        { step: 'User Flows', notes: 'Mapped the journey from raw dataset upload → AI metadata generation → conversational exploration, identifying where users needed the most guidance.' },
-        { step: 'Wireframes', notes: 'Structured the three-stage pipeline UI: ingestion view, metadata preview with edit capability, and a conversational chat interface for dataset exploration.' },
-        { step: 'Vibe Coding', notes: 'Prototyped the AI interaction loop in React.js + FastAPI to test response latency, context retention, and the feel of the conversational interface in real conditions.' },
+        { step: 'User Flows', notes: 'Mapped the flow a user would go through if they had to perform this task manually. Then started translating how the journey would look if user could accomplish this task on a single platform (in the chat interface)' },
+        { step: 'Wireframes', notes: '' },
+        { step: 'Coding', notes: 'Developed prototype in React.js + FastAPI' },
         {
           step: 'Design Decisions',
           notes: [
-            'Conversation as the primary interface — users access data through natural language, not navigation menus',
-            'AI-generated metadata cards labelled explicitly as AI-generated with curator attribution — trust signals built into the component, not added as an afterthought',
-            'Pop-out context panels keep users in the flow — deeper detail available without losing place in the chat',
-            'Quick action buttons surfaced inline with AI responses to reduce decision overhead at the moment of insight',
+            '',
           ],
           designSystemMap: {
-            systemContext: 'No predefined design system — lightweight, interaction-first interface built from scratch.',
-            designStrategy: 'Exploratory but guided, centred on conversational discovery',
+            systemContext: '.',
+            designStrategy: '',
             foundations: [
-              'Neutral, content-first color system — UI recedes so data can lead',
-              'Dialogue as the primary interface metaphor',
+              'Context is key: metadata and descriptions should be front and center to make datasets understandable',
+              'Dialogue interface to prompt natural language queries and responses, making data exploration feel conversational and intuitive',
             ],
             components: [
-              'Chat interface — primary interaction layer',
-              'Quick action buttons — inline with AI responses',
+              'Chat interface: primary interaction layer',
+              'Quick action buttons: inline with AI responses',
               'Pop-outs for deeper dataset context',
               'Metadata cards with AI attribution labels',
             ],
             interactionPatterns: [
-              'AI-driven exploration with user-initiated depth',
-              'Expandable context via pop-outs — detail on demand',
+              'AI-driven exploration with user:initiated depth',
+              'Expandable context via pop-outs: detail on demand',
             ],
             designStrategyPoints: [
-              'Conversation over navigation — reduce friction to insight',
-              'Trust first — AI output clearly identified and attributed',
-              'Interaction-first throughout — no static views',
+              'Conversation over navigation: reduce friction to insight',
+              'Trust first: Implement gaurdrails to verify AI output before presenting it.',,
             ],
             outcome: 'Transformed metadata exploration into a conversational, intuitive workflow.',
           },
-          media: { component: 'HiFiRAG' },
+          media: { component: '' },
         },
-        { step: 'Prototype', notes: 'Concept-tested the chat-based exploration flow with potential users to validate whether the AI explanations improved dataset comprehension versus raw browsing.' },
-        { step: 'Handoff & Ship', notes: 'Prepared detailed specs and component documentation for engineering handoff. The project remained exploratory and was not shipped to production.' },
+        { step: 'Prototype', notes: 'Concept-tested the chat-based exploration flow with potential users to validate whether the AI explanations improved dataset comprehension.' },
+        { step: 'Handoff & Ship', notes: 'The project was paused during prototype development due to business restructuring.' },
         {
           step: 'Feedback',
           notes: 'Presented the prototype at an internal showcase. No formal feedback was collected — the impressions below reflect the general sentiment heard from attendees during and after the session.',
@@ -340,7 +319,7 @@ export const PROJECTS = [
         },
       ],
     },
-  }, */
+  }, 
 
   {
     id: 'apoe-associated-gene-expression-explorer',

@@ -15,7 +15,7 @@ export default function RAGFeedback() {
         </div>
         <ul className="ssf__items">
           <li className="ssf__item ssf__item--note">
-            <span className="ssf__note-text">The general sentiment was positive — attendees felt the tool would speed up their workflows, appreciated how the knowledge was surfaced in a more intuitive form, and found the metadata generation particularly valuable.</span>
+            <span className="ssf__note-text">The general sentiment was positive. Attendees felt the tool would speed up their workflows, appreciated how the knowledge was surfaced in a more intuitive form, and found the metadata generation particularly valuable.</span>
           </li>
         </ul>
       </div>

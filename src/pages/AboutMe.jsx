@@ -72,6 +72,9 @@ function WhoIAm() {
             While my primary skills are rooted in bioinformatics analysis and coding, I naturally gravitated toward product designer–like roles in the past few years. Through those projects I worked on bridging the gap between technical systems and the people using them. That <strong>end-to-end perspective</strong> shapes how I think about every design decision.
           </p>
           <p className="whoiam__body">
+            My case studies focus on the design layer, but my involvement typically goes deeper — including backend development, data pipelines, and infrastructure. If you'd like a more technical walkthrough of any project, feel free to <a href="mailto:manasarapuru@gmail.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>reach out</a>.
+          </p>
+          <p className="whoiam__body">
             Outside of work, I spend my time crocheting, painting, cooking, and exploring animation techniques.
           </p>
         </div>

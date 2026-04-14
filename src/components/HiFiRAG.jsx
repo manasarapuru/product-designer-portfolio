@@ -3,7 +3,6 @@ import './HiFiRAG.css';
 export default function HiFiRAG() {
   return (
     <div className="hrag">
-      <p className="hrag__label">Component library — RAG Metadata Tool</p>
       <div className="hrag__grid">
 
         {/* Chat interface */}

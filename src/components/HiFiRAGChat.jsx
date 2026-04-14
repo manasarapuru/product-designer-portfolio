@@ -3,18 +3,13 @@ import './HiFiRAGChat.css';
 
 const CONVERSATION = [
   { role: 'bot', text: 'Welcome! How can I help you today?' },
-  { role: 'user', text: 'What datasets are available?' },
+  { role: 'user', text: 'I would like to know more about what data you have on X?' },
   {
     role: 'bot',
-    text: 'I found 3 relevant datasets in the knowledge base. Here\'s a quick summary:',
+    text: 'I found 3 relevant pieces of information that are relevant to your query. Here\'s a quick summary:',
     sources: ['Dataset A', 'Dataset B', 'Dataset C'],
   },
   { role: 'user', text: 'Tell me more about Dataset A.' },
-  {
-    role: 'bot',
-    text: 'Dataset A contains records from 2019–2023 across 12 categories. It\'s best suited for time-series analysis.',
-    sources: ['Dataset A · metadata', 'Schema v2'],
-  },
 ];
 
 // Delays (ms) before each message appears

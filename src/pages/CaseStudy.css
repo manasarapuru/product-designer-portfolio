@@ -603,6 +603,32 @@
   color: var(--ink);
 }
 
+/* ─── Scope note banner ─────────────────────────────────────────────── */
+.cs-scope-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 8px;
+  padding: 14px 20px;
+  background: var(--surface);
+  border-left: 4px solid #c8a800;
+  border-radius: 0 6px 6px 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.cs-scope-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #c8a800;
+}
+.cs-scope-note a {
+  color: #c8a800;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+
 /* ─── Takeaway blockquote ───────────────────────────────────────────── */
 .cs-takeaway {
   margin: 4px 0 0;

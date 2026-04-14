@@ -307,6 +307,12 @@ export default function CaseStudy() {
           </div>
         </header>
         
+        <div className="cs-scope-note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>This case study mainly showcases the design process. My work also included backend development. Please reach out if you are interested in learning more about the backend.</span>
+        </div>
+
+       <br />
         <Section label="Product" takeaway={cs.productTakeaway}>
           <NarrativeWithMedia text={cs.product} media={cs.productMedia} />
         </Section>
