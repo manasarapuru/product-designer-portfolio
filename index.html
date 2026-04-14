@@ -10,7 +10,7 @@
       (function() {
         var p = new URLSearchParams(window.location.search).get('p');
         if (p) {
-          window.history.replaceState(null, '', p + (window.location.hash || ''));
+          window.history.replaceState(null, '', '/product-designer-portfolio' + p + (window.location.hash || ''));
         }
       })();
     </script>
