@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   height: var(--nav-h);
-  padding: 0 56px;
+  padding: 0 48px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
@@ -72,9 +72,9 @@
 .navbar__name {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 0.03em;
+  text-transform: none;
   color: var(--ink);
   transition: color 0.2s;
   flex-shrink: 0;

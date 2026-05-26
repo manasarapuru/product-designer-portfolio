@@ -15,8 +15,6 @@ export default function AboutMe() {
 
         <div className="resume__header">
           <div className="resume__header-text">
-            <h1 className="resume__name serif">Manasa Rapuru</h1>
-            <p className="resume__title">Product Designer · Developer · Bioinformatician</p>
           </div>
           <a href="https://drive.google.com/file/d/1bqtE-PNut068E4MsQ8Ad770KJExCPFVX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume__download" aria-label="Download resume PDF">
             <DownloadIcon />
@@ -63,16 +61,13 @@ function WhoIAm() {
         <div>
           <span className="whoiam__label"></span>
           <p className="whoiam__body">
-            In the field of bioinformatics, computational methods are used to analyze biological data. However, many tools in this field prioritize <strong>technical functionality</strong> over <strong>usability</strong> due to the computational intensity of the work, resulting in powerful but difficult-to-use interfaces
+            Biological data is dense, technical, and growing faster than the tools built to make sense of it. I work at that gap, designing interfaces that make it easier to <strong>retrieve</strong>, <strong>explore</strong>, and <strong>communicate</strong> what the data actually means.
           </p>
           <p className="whoiam__body">
-          Having worked as both a developer and a user of such tools, I saw firsthand that usability is critical. When tools are difficult to use, scientific progress slows and insights can be lost. This experience shaped my focus on thoughtful interface design.
+            My background is in bioinformatics and software development, which means I've been on both sides: building the systems and struggling to use them. That experience is what pushed me toward design. Not as a layer on top, but as the thing that determines whether a tool gets used at all.
           </p>
           <p className="whoiam__body">
-            While my primary skills are rooted in bioinformatics analysis and coding, I naturally gravitated toward product designer–like roles in the past few years. Through those projects I worked on bridging the gap between technical systems and the people using them. That <strong>end-to-end perspective</strong> shapes how I think about every design decision.
-          </p>
-          <p className="whoiam__body">
-            My case studies focus on the design layer, but my involvement typically goes deeper — including backend development, data pipelines, and infrastructure. If you'd like a more technical walkthrough of any project, feel free to <a href="mailto:manasarapuru@gmail.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>reach out</a>.
+            I've applied this across molecular diagnostics, neurodegeneration research, and science communication, building from backend data pipelines to the interfaces researchers and scientists actually interact with. My case studies focus on the design process, but the work goes deeper. Feel free to <a href="mailto:manasarapuru@gmail.com" style={{ color: 'var(--accent)', fontWeight: 600 }}>reach out</a> for a fuller picture.
           </p>
           <p className="whoiam__body">
             Outside of work, I spend my time crocheting, painting, cooking, and exploring animation techniques.
@@ -82,7 +77,7 @@ function WhoIAm() {
 
   
 
-      <div className="whoiam__section">
+      {/* <div className="whoiam__section">
         <span className="whoiam__label">How I Work</span>
         <p className="whoiam__lead serif">A loop, not a line.</p>
         <div className="whoiam__process-svg-wrap">
@@ -130,7 +125,7 @@ function WhoIAm() {
         </div>
       </div>
 
-      <div className="whoiam__divider" />
+      <div className="whoiam__divider" /> */}
 
 
     </div>

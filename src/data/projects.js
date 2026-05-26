@@ -322,7 +322,7 @@ export const PROJECTS = [
   }, 
 
   {
-    id: 'apoe-associated-gene-expression-explorer',
+    id: 'visualization-platform-for-alzheimers-disease-research',
     title: 'Visualization Platform for Alzheimer\’s Disease Research',
     tagline: '',
     categories: ['exploration'],

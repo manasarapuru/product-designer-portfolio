@@ -9,7 +9,6 @@ import AllProjects from './pages/AllProjects';
 import CaseStudy from './pages/CaseStudy';
 import AboutMe from './pages/AboutMe';
 import Resume from './pages/Resume';
-import Intro from './components/Intro';
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -28,10 +27,6 @@ function AnimatedRoutes() {
 }
 
 export default function App() {
-  const [showIntro, setShowIntro] = useState(
-    () => !sessionStorage.getItem('intro-seen')
-  );
-
   const [dark, setDark] = useState(
     () => localStorage.getItem('theme') === 'dark'
   );
@@ -41,21 +36,10 @@ export default function App() {
     localStorage.setItem('theme', dark ? 'dark' : 'light');
   }, [dark]);
 
-  function handleIntroDone() {
-    sessionStorage.setItem('intro-seen', '1');
-    setShowIntro(false);
-  }
-
-  function handleIntroReplay() {
-    sessionStorage.removeItem('intro-seen');
-    setShowIntro(true);
-  }
-
   return (
     <ThemeContext.Provider value={{ dark, toggleDark: () => setDark(d => !d) }}>
-      <IntroContext.Provider value={{ replayIntro: handleIntroReplay }}>
+      <IntroContext.Provider value={{}}>
         <BrowserRouter basename="/product-designer-portfolio/">
-          {showIntro && <Intro onDone={handleIntroDone} />}
           <AnimatedRoutes />
         </BrowserRouter>
       </IntroContext.Provider>

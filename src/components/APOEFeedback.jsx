@@ -15,7 +15,7 @@ export default function APOEFeedback() {
         </div>
         <ul className="ssf__items">
           <li className="ssf__item ssf__item--note">
-            <span className="ssf__note-text">The lab needed a way to explore the dataset that didn't require going back to the researchers who built it. The requirements were centred on intuitive knowledge presentation, simplified data exploration, and the ability to surface insights directly from the platform.</span>
+            <span className="ssf__note-text">The lab needed a way to explore the dataset that didn't require going back to the researchers who built it. The requirements were centered on intuitive knowledge presentation, simplified data exploration, and the ability to surface insights directly from the platform.</span>
           </li>
         </ul>
       </div>
